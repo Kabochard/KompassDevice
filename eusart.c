@@ -11,7 +11,7 @@ static unsigned int lines=0;
 static unsigned int charac=0;
 
 void EUSART_Initialize(void) {
-    // disable interrupts before changing states
+    // disable interrupts before changing statessss
     PIE1bits.RCIE = 0;
     PIE1bits.TXIE = 0;
 
