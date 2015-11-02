@@ -15,7 +15,7 @@ void EUSART_Initialize(void) {
     PIE1bits.RCIE = 0;
     PIE1bits.TXIE = 0;
 
-    // Set the EUSART module to the options selected in the user interface.
+    // Set the EUSART module to the options selected in the user interfaceeee.
 
     // ABDEN disabled; WUE enabled; RCIDL idle; ABDOVF no_overflow; SCKP async_noninverted_sync_fallingedge; BRG16 16bit_generator; 
     BAUD1CON = 0x4A;
