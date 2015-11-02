@@ -26,7 +26,7 @@ void EUSART_Initialize(void) {
     // CSRC slave_mode; TRMT TSR_empty; TXEN enabled; BRGH hi_speed; SYNC asynchronous; SENDB sync_break_complete; TX9D 0x0; TX9 8-bit; 
     TX1STA = 0x26;
 
-    // Baud Rate = 115200; SPBRGL 34; 
+    //le plus simple Baud Rate = 115200; SPBRGL 34; 
     SP1BRGL = 0x22;
 
     // Baud Rate = 115200; SPBRGH 0; 
