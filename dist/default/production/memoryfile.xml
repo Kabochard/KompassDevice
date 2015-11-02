@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project>
+  <executable name="dist/default/production/Proto2_Magneto.X.production.hex">
+    <memory name="program">
+      <units>words</units>
+      <length>16384</length>
+      <used>6322</used>
+      <free>10062</free>
+    </memory>
+    <memory name="data">
+      <units>bytes</units>
+      <length>1024</length>
+      <used>490</used>
+      <free>534</free>
+    </memory>
+  </executable>
+</project>

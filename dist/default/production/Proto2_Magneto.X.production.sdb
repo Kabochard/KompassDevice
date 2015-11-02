@@ -1,0 +1,954 @@
+[p LITE_MODE AUTOSTATIC PIC14 PIC14E ]
+[d version 1.1 ]
+[d edition pro ]
+[d chip 16LF1947 ]
+[d frameptr 6 ]
+"6 /Applications/microchip/xc8/v1.35/sources/common/aldiv.c
+[v ___aldiv __aldiv `(l  1 e 4 0 ]
+"42 /Applications/microchip/xc8/v1.35/sources/common/altoft.c
+[v ___altoft __altoft `(f  1 e 3 0 ]
+"8 /Applications/microchip/xc8/v1.35/sources/common/atan.c
+[v _atan atan `(d  1 e 3 0 ]
+"8 /Applications/microchip/xc8/v1.35/sources/common/atan2.c
+[v _atan2 atan2 `(d  1 e 3 0 ]
+"6 /Applications/microchip/xc8/v1.35/sources/common/awdiv.c
+[v ___awdiv __awdiv `(i  1 e 2 0 ]
+[v i1___awdiv __awdiv `(i  1 e 2 0 ]
+"6 /Applications/microchip/xc8/v1.35/sources/common/awmod.c
+[v ___awmod __awmod `(i  1 e 2 0 ]
+[v i1___awmod __awmod `(i  1 e 2 0 ]
+"32 /Applications/microchip/xc8/v1.35/sources/common/awtoft.c
+[v ___awtoft __awtoft `(f  1 e 3 0 ]
+"464 /Applications/microchip/xc8/v1.35/sources/common/doprnt.c
+[v _printf printf `(i  1 e 2 0 ]
+"4 /Applications/microchip/xc8/v1.35/sources/common/evalpoly.c
+[v _eval_poly eval_poly `(d  1 e 3 0 ]
+"4 /Applications/microchip/xc8/v1.35/sources/common/fabs.c
+[v _fabs fabs `(d  1 e 3 0 ]
+"62 /Applications/microchip/xc8/v1.35/sources/common/float.c
+[v ___ftpack __ftpack `(f  1 e 3 0 ]
+"86 /Applications/microchip/xc8/v1.35/sources/common/ftadd.c
+[v ___ftadd __ftadd `(f  1 e 3 0 ]
+"56 /Applications/microchip/xc8/v1.35/sources/common/ftdiv.c
+[v ___ftdiv __ftdiv `(f  1 e 3 0 ]
+"4 /Applications/microchip/xc8/v1.35/sources/common/ftge.c
+[v ___ftge __ftge `(b  1 e 0 0 ]
+"62 /Applications/microchip/xc8/v1.35/sources/common/ftmul.c
+[v ___ftmul __ftmul `(f  1 e 3 0 ]
+"15 /Applications/microchip/xc8/v1.35/sources/common/ftneg.c
+[v ___ftneg __ftneg `(f  1 e 3 0 ]
+"18 /Applications/microchip/xc8/v1.35/sources/common/ftsub.c
+[v ___ftsub __ftsub `(f  1 e 3 0 ]
+"44 /Applications/microchip/xc8/v1.35/sources/common/fttol.c
+[v ___fttol __fttol `(l  1 e 4 0 ]
+"8 /Applications/microchip/xc8/v1.35/sources/common/isalpha.c
+[v _isalpha isalpha `(b  1 e 0 0 ]
+"8 /Applications/microchip/xc8/v1.35/sources/common/isdigit.c
+[v _isdigit isdigit `(b  1 e 0 0 ]
+"8 /Applications/microchip/xc8/v1.35/sources/common/isspace.c
+[v _isspace isspace `(b  1 e 0 0 ]
+"8 /Applications/microchip/xc8/v1.35/sources/common/isupper.c
+[v _isupper isupper `(b  1 e 0 0 ]
+"8 /Applications/microchip/xc8/v1.35/sources/common/strcpy.c
+[v _strcpy strcpy `(*.4uc  1 e 1 0 ]
+"8 /Applications/microchip/xc8/v1.35/sources/common/strncpy.c
+[v _strncpy strncpy `(*.4uc  1 e 1 0 ]
+"5 /Applications/microchip/xc8/v1.35/sources/common/strtol.c
+[v _strtol strtol `(l  1 e 4 0 ]
+"5 /Applications/microchip/xc8/v1.35/sources/common/toupper.c
+[v _toupper toupper `(uc  1 e 1 0 ]
+"15 /Applications/microchip/xc8/v1.35/sources/common/Umul16.c
+[v ___wmul __wmul `(ui  1 e 2 0 ]
+"15 /Applications/microchip/xc8/v1.35/sources/common/Umul32.c
+[v ___lmul __lmul `(ul  1 e 4 0 ]
+"4 /Applications/microchip/xc8/v1.35/sources/common/Umul8.c
+[v ___bmul __bmul `(uc  1 e 1 0 ]
+[v i1___bmul __bmul `(uc  1 e 1 0 ]
+"6 /Applications/microchip/xc8/v1.35/sources/pic/eeprom.c
+[v _eecpymem eecpymem `(v  1 e 0 0 ]
+"24
+[v _memcpyee memcpyee `(v  1 e 0 0 ]
+"87 /Users/timconsigny/Downloads/SOurce-2/Proto2_Magneto.X/DigitsDriver.c
+[v _clearshift clearshift `(v  1 e 0 0 ]
+"161
+[v _display display `(v  1 e 0 0 ]
+[v i1_display display `(v  1 e 0 0 ]
+"13 /Users/timconsigny/Downloads/SOurce-2/Proto2_Magneto.X/eusart.c
+[v _EUSART_Initialize EUSART_Initialize `(v  1 e 0 0 ]
+"53
+[v _EUSART_Receive_ISR EUSART_Receive_ISR `(i  1 e 2 0 ]
+"88
+[v _putch putch `(v  1 e 0 0 ]
+"98
+[v _processline processline `(v  1 e 0 0 ]
+"195
+[v _isdigi isdigi `(i  1 e 2 0 ]
+"11 /Users/timconsigny/Downloads/SOurce-2/Proto2_Magneto.X/i2c.h
+[v _i2c_Init i2c_Init `(i  1 e 2 0 ]
+"28
+[v _i2c_Wait i2c_Wait `(v  1 e 0 0 ]
+"33
+[v _i2c_Start i2c_Start `(v  1 e 0 0 ]
+"40
+[v _i2c_Restart i2c_Restart `(v  1 e 0 0 ]
+"46
+[v _i2c_Stop i2c_Stop `(v  1 e 0 0 ]
+"53
+[v _i2c_Write i2c_Write `(v  1 e 0 0 ]
+"72
+[v _i2c_Read i2c_Read `(uc  1 e 1 0 ]
+"25 /Users/timconsigny/Downloads/SOurce-2/Proto2_Magneto.X/Init.c
+[v _SYSTEM_Initialize SYSTEM_Initialize `(v  1 e 0 0 ]
+"32
+[v _OSCILLATOR_Initialize OSCILLATOR_Initialize `(v  1 e 0 0 ]
+"4 /Users/timconsigny/Downloads/SOurce-2/Proto2_Magneto.X/interrupt_manager.c
+[v _INTERRUPT_InterruptManager INTERRUPT_InterruptManager `II(v  1 e 0 0 ]
+"10 /Users/timconsigny/Downloads/SOurce-2/Proto2_Magneto.X/LIS3MDL.c
+[v _abs abs `(i  1 e 2 0 ]
+"15
+[v _LIS3MDL_init LIS3MDL_init `(v  1 e 0 0 ]
+"28
+[v _LIS3MDL_Write LIS3MDL_Write `(v  1 e 0 0 ]
+"38
+[v _LIS3MDL_Read_XY LIS3MDL_Read_XY `(v  1 e 0 0 ]
+"62
+[v _LIS3MDL_Read_Raw_XY LIS3MDL_Read_Raw_XY `(v  1 e 0 0 ]
+"83
+[v _LIS3MDL_Read_XYZ LIS3MDL_Read_XYZ `(v  1 e 0 0 ]
+"127
+[v _LIS3MDL_Wait LIS3MDL_Wait `(v  1 e 0 0 ]
+"201
+[v _argXY argXY `(d  1 e 3 0 ]
+"13 /Users/timconsigny/Downloads/SOurce-2/Proto2_Magneto.X/main.c
+[v _main main `(v  1 e 0 0 ]
+"50 /Users/timconsigny/Downloads/SOurce-2/Proto2_Magneto.X/pin_manager.c
+[v _PIN_MANAGER_Initialize PIN_MANAGER_Initialize `(v  1 e 0 0 ]
+"6 /Users/timconsigny/Downloads/SOurce-2/Proto2_Magneto.X/Switec_motor.c
+[v _stepClock stepClock `(v  1 e 0 0 ]
+"21
+[v _stepCounterClock stepCounterClock `(v  1 e 0 0 ]
+[v i1_stepCounterClock stepCounterClock `(v  1 e 0 0 ]
+"34
+[v _zeroNeedle zeroNeedle `(i  1 e 2 0 ]
+"43
+[v _goToPos goToPos `(v  1 e 0 0 ]
+[s S31 . 1 `uc 1 IOCIF 1 0 :1:0 
+`uc 1 INTF 1 0 :1:1 
+`uc 1 TMR0IF 1 0 :1:2 
+`uc 1 IOCIE 1 0 :1:3 
+`uc 1 INTE 1 0 :1:4 
+`uc 1 TMR0IE 1 0 :1:5 
+`uc 1 PEIE 1 0 :1:6 
+`uc 1 GIE 1 0 :1:7 
+]
+"360 /Applications/microchip/xc8/v1.35/include/pic16lf1947.h
+[s S40 . 1 `uc 1 . 1 0 :2:0 
+`uc 1 T0IF 1 0 :1:2 
+`uc 1 . 1 0 :2:3 
+`uc 1 T0IE 1 0 :1:5 
+]
+[u S45 . 1 `S31 1 . 1 0 `S40 1 . 1 0 ]
+[v _INTCONbits INTCONbits `VES45  1 e 1 @11 ]
+"990
+[v _PORTD PORTD `VEuc  1 e 1 @15 ]
+[s S405 . 1 `uc 1 TMR1IF 1 0 :1:0 
+`uc 1 TMR2IF 1 0 :1:1 
+`uc 1 CCP1IF 1 0 :1:2 
+`uc 1 SSP1IF 1 0 :1:3 
+`uc 1 TX1IF 1 0 :1:4 
+`uc 1 RC1IF 1 0 :1:5 
+`uc 1 ADIF 1 0 :1:6 
+`uc 1 TMR1GIF 1 0 :1:7 
+]
+"1380
+[s S414 . 1 `uc 1 . 1 0 :3:0 
+`uc 1 SSPIF 1 0 :1:3 
+`uc 1 TXIF 1 0 :1:4 
+`uc 1 RCIF 1 0 :1:5 
+]
+[u S419 . 1 `S405 1 . 1 0 `S414 1 . 1 0 ]
+[v _PIR1bits PIR1bits `VES419  1 e 1 @17 ]
+"2011
+[v _TRISA TRISA `VEuc  1 e 1 @140 ]
+"2072
+[v _TRISB TRISB `VEuc  1 e 1 @141 ]
+"2133
+[v _TRISC TRISC `VEuc  1 e 1 @142 ]
+"2194
+[v _TRISD TRISD `VEuc  1 e 1 @143 ]
+"2255
+[v _TRISE TRISE `VEuc  1 e 1 @144 ]
+[s S373 . 1 `uc 1 TMR1IE 1 0 :1:0 
+`uc 1 TMR2IE 1 0 :1:1 
+`uc 1 CCP1IE 1 0 :1:2 
+`uc 1 SSP1IE 1 0 :1:3 
+`uc 1 TX1IE 1 0 :1:4 
+`uc 1 RC1IE 1 0 :1:5 
+`uc 1 ADIE 1 0 :1:6 
+`uc 1 TMR1GIE 1 0 :1:7 
+]
+"2339
+[s S382 . 1 `uc 1 . 1 0 :3:0 
+`uc 1 SSPIE 1 0 :1:3 
+`uc 1 TXIE 1 0 :1:4 
+`uc 1 RCIE 1 0 :1:5 
+]
+[u S387 . 1 `S373 1 . 1 0 `S382 1 . 1 0 ]
+[v _PIE1bits PIE1bits `VES387  1 e 1 @145 ]
+[s S193 . 1 `uc 1 PS0 1 0 :1:0 
+`uc 1 PS1 1 0 :1:1 
+`uc 1 PS2 1 0 :1:2 
+`uc 1 PSA 1 0 :1:3 
+`uc 1 T0SE 1 0 :1:4 
+`uc 1 T0CS 1 0 :1:5 
+`uc 1 INTEDG 1 0 :1:6 
+`uc 1 nWPUEN 1 0 :1:7 
+]
+"2565
+[s S202 . 1 `uc 1 PS 1 0 :3:0 
+`uc 1 . 1 0 :1:3 
+`uc 1 TMR0SE 1 0 :1:4 
+`uc 1 TMR0CS 1 0 :1:5 
+]
+[u S207 . 1 `S193 1 . 1 0 `S202 1 . 1 0 ]
+[v _OPTION_REGbits OPTION_REGbits `VES207  1 e 1 @149 ]
+"2732
+[v _OSCTUNE OSCTUNE `VEuc  1 e 1 @152 ]
+"2789
+[v _OSCCON OSCCON `VEuc  1 e 1 @153 ]
+"2860
+[v _OSCSTAT OSCSTAT `VEuc  1 e 1 @154 ]
+"3124
+[v _LATA LATA `VEuc  1 e 1 @268 ]
+"3185
+[v _LATB LATB `VEuc  1 e 1 @269 ]
+"3246
+[v _LATC LATC `VEuc  1 e 1 @270 ]
+"3307
+[v _LATD LATD `VEuc  1 e 1 @271 ]
+"3376
+[v _LATE LATE `VEuc  1 e 1 @272 ]
+"4053
+[v _APFCON APFCON `VEuc  1 e 1 @285 ]
+"4235
+[v _ANSELA ANSELA `VEuc  1 e 1 @396 ]
+"4287
+[v _ANSELE ANSELE `VEuc  1 e 1 @400 ]
+"4512
+[v _RC1REG RC1REG `VEuc  1 e 1 @409 ]
+"4549
+[v _TX1REG TX1REG `VEuc  1 e 1 @410 ]
+"4592
+[v _SP1BRGL SP1BRGL `VEuc  1 e 1 @411 ]
+"4645
+[v _SP1BRGH SP1BRGH `VEuc  1 e 1 @412 ]
+"4682
+[v _RC1STA RC1STA `VEuc  1 e 1 @413 ]
+[s S474 . 1 `uc 1 RX9D 1 0 :1:0 
+`uc 1 OERR 1 0 :1:1 
+`uc 1 FERR 1 0 :1:2 
+`uc 1 ADDEN 1 0 :1:3 
+`uc 1 CREN 1 0 :1:4 
+`uc 1 SREN 1 0 :1:5 
+`uc 1 RX9 1 0 :1:6 
+`uc 1 SPEN 1 0 :1:7 
+]
+"4704
+[u S483 . 1 `S474 1 . 1 0 ]
+[v _RC1STAbits RC1STAbits `VES483  1 e 1 @413 ]
+"4803
+[v _TX1STA TX1STA `VEuc  1 e 1 @414 ]
+[s S508 . 1 `uc 1 TX9D 1 0 :1:0 
+`uc 1 TRMT 1 0 :1:1 
+`uc 1 BRGH 1 0 :1:2 
+`uc 1 SENDB 1 0 :1:3 
+`uc 1 SYNC 1 0 :1:4 
+`uc 1 TXEN 1 0 :1:5 
+`uc 1 TX9 1 0 :1:6 
+`uc 1 CSRC 1 0 :1:7 
+]
+"4825
+[u S517 . 1 `S508 1 . 1 0 ]
+[v _TX1STAbits TX1STAbits `VES517  1 e 1 @414 ]
+"4924
+[v _BAUD1CON BAUD1CON `VEuc  1 e 1 @415 ]
+"5025
+[v _WPUB WPUB `VEuc  1 e 1 @525 ]
+"5094
+[v _SSP1BUF SSP1BUF `VEuc  1 e 1 @529 ]
+"5131
+[v _SSP1ADD SSP1ADD `VEuc  1 e 1 @530 ]
+"5205
+[v _SSP1STAT SSP1STAT `VEuc  1 e 1 @532 ]
+"5326
+[v _SSP1CON1 SSP1CON1 `VEuc  1 e 1 @533 ]
+"5505
+[v _SSP1CON2 SSP1CON2 `VEuc  1 e 1 @534 ]
+"7424
+[v _TRISF TRISF `VEuc  1 e 1 @780 ]
+"7485
+[v _TRISG TRISG `VEuc  1 e 1 @781 ]
+"8050
+[v _LATF LATF `VEuc  1 e 1 @908 ]
+"8111
+[v _LATG LATG `VEuc  1 e 1 @909 ]
+"8367
+[v _ANSELF ANSELF `VEuc  1 e 1 @1036 ]
+"8436
+[v _ANSELG ANSELG `VEuc  1 e 1 @1037 ]
+"8699
+[v _WPUG WPUG `VEuc  1 e 1 @1165 ]
+"12171
+[v _RA0 RA0 `VEb  1 e 0 @96 ]
+"12173
+[v _RA1 RA1 `VEb  1 e 0 @97 ]
+"12175
+[v _RA2 RA2 `VEb  1 e 0 @98 ]
+"12179
+[v _RA4 RA4 `VEb  1 e 0 @100 ]
+"12203
+[v _RC0 RC0 `VEb  1 e 0 @112 ]
+"12205
+[v _RC1 RC1 `VEb  1 e 0 @113 ]
+"12211
+[v _RC2 RC2 `VEb  1 e 0 @114 ]
+"12233
+[v _RD0 RD0 `VEb  1 e 0 @120 ]
+"12235
+[v _RD1 RD1 `VEb  1 e 0 @121 ]
+"12237
+[v _RD2 RD2 `VEb  1 e 0 @122 ]
+"12249
+[v _RE0 RE0 `VEb  1 e 0 @128 ]
+"12251
+[v _RE1 RE1 `VEb  1 e 0 @129 ]
+"12253
+[v _RE2 RE2 `VEb  1 e 0 @130 ]
+"12255
+[v _RE3 RE3 `VEb  1 e 0 @131 ]
+"12257
+[v _RE4 RE4 `VEb  1 e 0 @132 ]
+"12259
+[v _RE5 RE5 `VEb  1 e 0 @133 ]
+"12261
+[v _RE6 RE6 `VEb  1 e 0 @134 ]
+"12265
+[v _RF0 RF0 `VEb  1 e 0 @5216 ]
+"12267
+[v _RF1 RF1 `VEb  1 e 0 @5217 ]
+"12269
+[v _RF2 RF2 `VEb  1 e 0 @5218 ]
+"12271
+[v _RF3 RF3 `VEb  1 e 0 @5219 ]
+"12273
+[v _RF4 RF4 `VEb  1 e 0 @5220 ]
+"12275
+[v _RF5 RF5 `VEb  1 e 0 @5221 ]
+"12277
+[v _RF6 RF6 `VEb  1 e 0 @5222 ]
+"12279
+[v _RF7 RF7 `VEb  1 e 0 @5223 ]
+"12281
+[v _RG0 RG0 `VEb  1 e 0 @5224 ]
+"12283
+[v _RG1 RG1 `VEb  1 e 0 @5225 ]
+"12285
+[v _RG2 RG2 `VEb  1 e 0 @5226 ]
+"12287
+[v _RG3 RG3 `VEb  1 e 0 @5227 ]
+"13125
+[v _TRISC3 TRISC3 `VEb  1 e 0 @1139 ]
+"13127
+[v _TRISC4 TRISC4 `VEb  1 e 0 @1140 ]
+"13311
+[v _SEN SEN `VEb  1 e 0 @4272 ]
+"13313
+[v _RSEN RSEN `VEb  1 e 0 @4273 ]
+"13315
+[v _PEN PEN `VEb  1 e 0 @4274 ]
+"13317
+[v _RCEN RCEN `VEb  1 e 0 @4275 ]
+"13319
+[v _ACKDT ACKDT `VEb  1 e 0 @4277 ]
+"13321
+[v _ACKEN ACKEN `VEb  1 e 0 @4276 ]
+"3 /Applications/microchip/xc8/v1.35/sources/common/errno.c
+[v _errno errno `i  1 e 2 0 ]
+"4 /Users/timconsigny/Downloads/SOurce-2/Proto2_Magneto.X/DigitsDriver.c
+[v _DIGIT DIGIT `[11][7]uc  1 s 77 DIGIT ]
+"8 /Users/timconsigny/Downloads/SOurce-2/Proto2_Magneto.X/eusart.c
+[v _console console `[10][16]uc  1 s 160 console ]
+"10
+[v _lines lines `ui  1 s 2 lines ]
+"11
+[v _charac charac `ui  1 s 2 charac ]
+"35 /Users/timconsigny/Downloads/SOurce-2/Proto2_Magneto.X/LIS3MDL.h
+[v _vX vX `i  1 e 2 0 ]
+[v _vY vY `i  1 e 2 0 ]
+[v _vZ vZ `i  1 e 2 0 ]
+"36
+[v _Xsf Xsf `f  1 e 3 0 ]
+[v _Ysf Ysf `f  1 e 3 0 ]
+[v _Xoff Xoff `f  1 e 3 0 ]
+[v _Yoff Yoff `f  1 e 3 0 ]
+"8 /Users/timconsigny/Downloads/SOurce-2/Proto2_Magneto.X/Switec_motor.h
+[v _stateMap stateMap `[6]uc  1 s 6 stateMap ]
+"9
+[v _state state `VEuc  1 e 1 0 ]
+"10
+[v _position position `i  1 e 2 0 ]
+"13 /Users/timconsigny/Downloads/SOurce-2/Proto2_Magneto.X/main.c
+[v _main main `(v  1 e 0 0 ]
+{
+"31
+[v main@i i `i  1 a 2 53 ]
+"17
+[v main@dY dY `f  1 a 3 46 ]
+[v main@dX dX `f  1 a 3 43 ]
+"15
+[v main@angle angle `d  1 a 3 31 ]
+"16
+[v main@maxY maxY `i  1 a 2 51 ]
+[v main@maxX maxX `i  1 a 2 49 ]
+[v main@minY minY `i  1 a 2 41 ]
+[v main@minX minX `i  1 a 2 39 ]
+"79
+} 0
+"34 /Users/timconsigny/Downloads/SOurce-2/Proto2_Magneto.X/Switec_motor.c
+[v _zeroNeedle zeroNeedle `(i  1 e 2 0 ]
+{
+"36
+[v zeroNeedle@i i `ui  1 a 2 2 ]
+"41
+} 0
+"21
+[v _stepCounterClock stepCounterClock `(v  1 e 0 0 ]
+{
+"32
+} 0
+"464 /Applications/microchip/xc8/v1.35/sources/common/doprnt.c
+[v _printf printf `(i  1 e 2 0 ]
+{
+"499
+[v printf@c c `c  1 a 1 7 ]
+"466
+[v printf@ap ap `[1]*.4v  1 a 1 6 ]
+"464
+[v printf@f f `*.25DCCuc  1 p 2 1 ]
+"1541
+} 0
+"88 /Users/timconsigny/Downloads/SOurce-2/Proto2_Magneto.X/eusart.c
+[v _putch putch `(v  1 e 0 0 ]
+{
+[v putch@byte byte `uc  1 a 1 wreg ]
+[v putch@byte byte `uc  1 a 1 wreg ]
+[v putch@byte byte `uc  1 a 1 0 ]
+"93
+} 0
+"161 /Users/timconsigny/Downloads/SOurce-2/Proto2_Magneto.X/DigitsDriver.c
+[v _display display `(v  1 e 0 0 ]
+{
+"172
+[v display@x3 x3 `i  1 a 2 26 ]
+"173
+[v display@x2 x2 `i  1 a 2 24 ]
+"174
+[v display@x1 x1 `i  1 a 2 22 ]
+"175
+[v display@x0 x0 `i  1 a 2 20 ]
+"163
+[v display@neg neg `uc  1 a 1 19 ]
+"161
+[v display@x x `i  1 p 2 16 ]
+"221
+} 0
+"4 /Applications/microchip/xc8/v1.35/sources/common/Umul8.c
+[v ___bmul __bmul `(uc  1 e 1 0 ]
+{
+[v ___bmul@multiplier multiplier `uc  1 a 1 wreg ]
+"6
+[v ___bmul@product product `uc  1 a 1 2 ]
+"4
+[v ___bmul@multiplier multiplier `uc  1 a 1 wreg ]
+[v ___bmul@multiplicand multiplicand `uc  1 p 1 0 ]
+"6
+[v ___bmul@multiplier multiplier `uc  1 a 1 3 ]
+"51
+} 0
+"6 /Applications/microchip/xc8/v1.35/sources/common/awmod.c
+[v ___awmod __awmod `(i  1 e 2 0 ]
+{
+"11
+[v ___awmod@sign sign `uc  1 a 1 6 ]
+[v ___awmod@counter counter `uc  1 a 1 5 ]
+"6
+[v ___awmod@divisor divisor `i  1 p 2 0 ]
+[v ___awmod@dividend dividend `i  1 p 2 2 ]
+"35
+} 0
+"6 /Applications/microchip/xc8/v1.35/sources/common/awdiv.c
+[v ___awdiv __awdiv `(i  1 e 2 0 ]
+{
+"11
+[v ___awdiv@quotient quotient `i  1 a 2 14 ]
+"12
+[v ___awdiv@sign sign `uc  1 a 1 13 ]
+[v ___awdiv@counter counter `uc  1 a 1 12 ]
+"6
+[v ___awdiv@divisor divisor `i  1 p 2 7 ]
+[v ___awdiv@dividend dividend `i  1 p 2 9 ]
+"42
+} 0
+"201 /Users/timconsigny/Downloads/SOurce-2/Proto2_Magneto.X/LIS3MDL.c
+[v _argXY argXY `(d  1 e 3 0 ]
+{
+"204
+} 0
+"8 /Applications/microchip/xc8/v1.35/sources/common/atan2.c
+[v _atan2 atan2 `(d  1 e 3 0 ]
+{
+"10
+[v atan2@v v `d  1 a 3 25 ]
+"8
+[v atan2@y y `d  1 p 3 70 ]
+[v atan2@x x `d  1 p 3 73 ]
+"47
+} 0
+"8 /Applications/microchip/xc8/v1.35/sources/common/atan.c
+[v _atan atan `(d  1 e 3 0 ]
+{
+"28
+[v atan@val val `d  1 a 3 10 ]
+[v atan@val_squared val_squared `d  1 a 3 7 ]
+[v atan@x x `d  1 a 3 3 ]
+[v atan@y y `d  1 a 3 0 ]
+"27
+[v atan@recip recip `uc  1 a 1 6 ]
+"8
+[v atan@f f `d  1 p 3 66 ]
+"10
+[v atan@coeff_a coeff_a `DCC[6]d  1 s 18 coeff_a ]
+"19
+[v atan@coeff_b coeff_b `DCC[5]d  1 s 15 coeff_b ]
+"41
+} 0
+"4 /Applications/microchip/xc8/v1.35/sources/common/fabs.c
+[v _fabs fabs `(d  1 e 3 0 ]
+{
+[v fabs@d d `d  1 p 3 27 ]
+"9
+} 0
+"15 /Applications/microchip/xc8/v1.35/sources/common/ftneg.c
+[v ___ftneg __ftneg `(f  1 e 3 0 ]
+{
+[v ___ftneg@f1 f1 `f  1 p 3 24 ]
+"20
+} 0
+"4 /Applications/microchip/xc8/v1.35/sources/common/ftge.c
+[v ___ftge __ftge `(b  1 e 0 0 ]
+{
+[v ___ftge@ff1 ff1 `f  1 p 3 0 ]
+[v ___ftge@ff2 ff2 `f  1 p 3 3 ]
+"13
+} 0
+"4 /Applications/microchip/xc8/v1.35/sources/common/evalpoly.c
+[v _eval_poly eval_poly `(d  1 e 3 0 ]
+{
+"6
+[v eval_poly@res res `d  1 a 3 63 ]
+"4
+[v eval_poly@x x `d  1 p 3 56 ]
+[v eval_poly@d d `*.25DCCd  1 p 2 59 ]
+[v eval_poly@n n `i  1 p 2 61 ]
+"12
+} 0
+"15 /Applications/microchip/xc8/v1.35/sources/common/Umul16.c
+[v ___wmul __wmul `(ui  1 e 2 0 ]
+{
+"17
+[v ___wmul@product product `ui  1 a 2 4 ]
+"15
+[v ___wmul@multiplier multiplier `ui  1 p 2 0 ]
+[v ___wmul@multiplicand multiplicand `ui  1 p 2 2 ]
+"53
+} 0
+"56 /Applications/microchip/xc8/v1.35/sources/common/ftdiv.c
+[v ___ftdiv __ftdiv `(f  1 e 3 0 ]
+{
+"60
+[v ___ftdiv@f3 f3 `f  1 a 3 19 ]
+"59
+[v ___ftdiv@sign sign `uc  1 a 1 23 ]
+[v ___ftdiv@exp exp `uc  1 a 1 22 ]
+[v ___ftdiv@cntr cntr `uc  1 a 1 18 ]
+"56
+[v ___ftdiv@f2 f2 `f  1 p 3 8 ]
+[v ___ftdiv@f1 f1 `f  1 p 3 11 ]
+"86
+} 0
+"18 /Applications/microchip/xc8/v1.35/sources/common/ftsub.c
+[v ___ftsub __ftsub `(f  1 e 3 0 ]
+{
+[v ___ftsub@f2 f2 `f  1 p 3 40 ]
+[v ___ftsub@f1 f1 `f  1 p 3 43 ]
+"27
+} 0
+"25 /Users/timconsigny/Downloads/SOurce-2/Proto2_Magneto.X/Init.c
+[v _SYSTEM_Initialize SYSTEM_Initialize `(v  1 e 0 0 ]
+{
+"30
+} 0
+"11 /Users/timconsigny/Downloads/SOurce-2/Proto2_Magneto.X/i2c.h
+[v _i2c_Init i2c_Init `(i  1 e 2 0 ]
+{
+"25
+} 0
+"50 /Users/timconsigny/Downloads/SOurce-2/Proto2_Magneto.X/pin_manager.c
+[v _PIN_MANAGER_Initialize PIN_MANAGER_Initialize `(v  1 e 0 0 ]
+{
+"83
+} 0
+"32 /Users/timconsigny/Downloads/SOurce-2/Proto2_Magneto.X/Init.c
+[v _OSCILLATOR_Initialize OSCILLATOR_Initialize `(v  1 e 0 0 ]
+{
+"41
+} 0
+"13 /Users/timconsigny/Downloads/SOurce-2/Proto2_Magneto.X/eusart.c
+[v _EUSART_Initialize EUSART_Initialize `(v  1 e 0 0 ]
+{
+"37
+} 0
+"15 /Users/timconsigny/Downloads/SOurce-2/Proto2_Magneto.X/LIS3MDL.c
+[v _LIS3MDL_init LIS3MDL_init `(v  1 e 0 0 ]
+{
+"26
+} 0
+"28
+[v _LIS3MDL_Write LIS3MDL_Write `(v  1 e 0 0 ]
+{
+[v LIS3MDL_Write@reg reg `uc  1 a 1 wreg ]
+[v LIS3MDL_Write@reg reg `uc  1 a 1 wreg ]
+[v LIS3MDL_Write@data data `uc  1 p 1 1 ]
+"30
+[v LIS3MDL_Write@reg reg `uc  1 a 1 2 ]
+"36
+} 0
+"127
+[v _LIS3MDL_Wait LIS3MDL_Wait `(v  1 e 0 0 ]
+{
+"129
+[v LIS3MDL_Wait@ZYXDA ZYXDA `uc  1 a 1 4 ]
+"140
+} 0
+"38
+[v _LIS3MDL_Read_XY LIS3MDL_Read_XY `(v  1 e 0 0 ]
+{
+"40
+[v LIS3MDL_Read_XY@Y_H Y_H `uc  1 a 1 3 ]
+[v LIS3MDL_Read_XY@Y_L Y_L `uc  1 a 1 2 ]
+[v LIS3MDL_Read_XY@X_H X_H `uc  1 a 1 1 ]
+[v LIS3MDL_Read_XY@X_L X_L `uc  1 a 1 0 ]
+"60
+} 0
+"44 /Applications/microchip/xc8/v1.35/sources/common/fttol.c
+[v ___fttol __fttol `(l  1 e 4 0 ]
+{
+"47
+[v ___fttol@lval lval `ul  1 a 4 65 ]
+"46
+[v ___fttol@exp1 exp1 `uc  1 a 1 69 ]
+[v ___fttol@sign1 sign1 `uc  1 a 1 64 ]
+"44
+[v ___fttol@f1 f1 `f  1 p 3 56 ]
+"73
+} 0
+"62 /Applications/microchip/xc8/v1.35/sources/common/ftmul.c
+[v ___ftmul __ftmul `(f  1 e 3 0 ]
+{
+"65
+[v ___ftmul@f3_as_product f3_as_product `um  1 a 3 51 ]
+"64
+[v ___ftmul@sign sign `uc  1 a 1 55 ]
+[v ___ftmul@cntr cntr `uc  1 a 1 54 ]
+[v ___ftmul@exp exp `uc  1 a 1 50 ]
+"62
+[v ___ftmul@f1 f1 `f  1 p 3 40 ]
+[v ___ftmul@f2 f2 `f  1 p 3 43 ]
+"157
+} 0
+"86 /Applications/microchip/xc8/v1.35/sources/common/ftadd.c
+[v ___ftadd __ftadd `(f  1 e 3 0 ]
+{
+"88
+[v ___ftadd@exp1 exp1 `uc  1 a 1 39 ]
+[v ___ftadd@exp2 exp2 `uc  1 a 1 38 ]
+[v ___ftadd@sign sign `uc  1 a 1 37 ]
+"86
+[v ___ftadd@f1 f1 `f  1 p 3 27 ]
+[v ___ftadd@f2 f2 `f  1 p 3 30 ]
+"148
+} 0
+"32 /Applications/microchip/xc8/v1.35/sources/common/awtoft.c
+[v ___awtoft __awtoft `(f  1 e 3 0 ]
+{
+"34
+[v ___awtoft@sign sign `uc  1 a 1 13 ]
+"32
+[v ___awtoft@c c `i  1 p 2 8 ]
+"42
+} 0
+"62 /Applications/microchip/xc8/v1.35/sources/common/float.c
+[v ___ftpack __ftpack `(f  1 e 3 0 ]
+{
+[v ___ftpack@arg arg `um  1 p 3 0 ]
+[v ___ftpack@exp exp `uc  1 p 1 3 ]
+[v ___ftpack@sign sign `uc  1 p 1 4 ]
+"86
+} 0
+"62 /Users/timconsigny/Downloads/SOurce-2/Proto2_Magneto.X/LIS3MDL.c
+[v _LIS3MDL_Read_Raw_XY LIS3MDL_Read_Raw_XY `(v  1 e 0 0 ]
+{
+"64
+[v LIS3MDL_Read_Raw_XY@Y_H Y_H `uc  1 a 1 11 ]
+[v LIS3MDL_Read_Raw_XY@Y_L Y_L `uc  1 a 1 10 ]
+[v LIS3MDL_Read_Raw_XY@X_H X_H `uc  1 a 1 9 ]
+[v LIS3MDL_Read_Raw_XY@X_L X_L `uc  1 a 1 8 ]
+"81
+} 0
+"53 /Users/timconsigny/Downloads/SOurce-2/Proto2_Magneto.X/i2c.h
+[v _i2c_Write i2c_Write `(v  1 e 0 0 ]
+{
+[v i2c_Write@data data `uc  1 a 1 wreg ]
+[v i2c_Write@data data `uc  1 a 1 wreg ]
+"55
+[v i2c_Write@data data `uc  1 a 1 0 ]
+"57
+} 0
+"46
+[v _i2c_Stop i2c_Stop `(v  1 e 0 0 ]
+{
+"50
+} 0
+"33
+[v _i2c_Start i2c_Start `(v  1 e 0 0 ]
+{
+"37
+} 0
+"40
+[v _i2c_Restart i2c_Restart `(v  1 e 0 0 ]
+{
+"43
+} 0
+"72
+[v _i2c_Read i2c_Read `(uc  1 e 1 0 ]
+{
+[v i2c_Read@ack ack `uc  1 a 1 wreg ]
+"77
+[v i2c_Read@i2cReadData i2cReadData `uc  1 a 1 2 ]
+"72
+[v i2c_Read@ack ack `uc  1 a 1 wreg ]
+"79
+[v i2c_Read@ack ack `uc  1 a 1 1 ]
+"89
+} 0
+"28
+[v _i2c_Wait i2c_Wait `(v  1 e 0 0 ]
+{
+"30
+} 0
+"4 /Users/timconsigny/Downloads/SOurce-2/Proto2_Magneto.X/interrupt_manager.c
+[v _INTERRUPT_InterruptManager INTERRUPT_InterruptManager `II(v  1 e 0 0 ]
+{
+"14
+} 0
+"53 /Users/timconsigny/Downloads/SOurce-2/Proto2_Magneto.X/eusart.c
+[v _EUSART_Receive_ISR EUSART_Receive_ISR `(i  1 e 2 0 ]
+{
+"73
+[v EUSART_Receive_ISR@str str `[9]uc  1 a 9 53 ]
+"55
+[v EUSART_Receive_ISR@incoming incoming `uc  1 a 1 62 ]
+"85
+} 0
+"8 /Applications/microchip/xc8/v1.35/sources/common/strncpy.c
+[v _strncpy strncpy `(*.4uc  1 e 1 0 ]
+{
+[v strncpy@to to `*.4uc  1 a 1 wreg ]
+"15
+[v strncpy@cp cp `*.4uc  1 a 1 7 ]
+"8
+[v strncpy@to to `*.4uc  1 a 1 wreg ]
+[v strncpy@from from `*.39DCCuc  1 p 2 0 ]
+[v strncpy@size size `ui  1 p 2 2 ]
+"18
+[v strncpy@to to `*.4uc  1 a 1 6 ]
+"27
+} 0
+"98 /Users/timconsigny/Downloads/SOurce-2/Proto2_Magneto.X/eusart.c
+[v _processline processline `(v  1 e 0 0 ]
+{
+[v processline@ch ch `*.4uc  1 a 1 wreg ]
+"104
+[v processline@src2 src2 `[8]uc  1 a 8 23 ]
+"103
+[v processline@src1 src1 `[8]uc  1 a 8 15 ]
+"105
+[v processline@dist dist `[5]uc  1 a 5 35 ]
+"106
+[v processline@bear bear `[3]uc  1 a 3 40 ]
+"109
+[v processline@bearing bearing `i  1 a 2 33 ]
+"108
+[v processline@distance distance `i  1 a 2 31 ]
+"134
+[v processline@ptr ptr `*.4uc  1 a 1 43 ]
+"98
+[v processline@ch ch `*.4uc  1 a 1 wreg ]
+"100
+[v processline@ch ch `*.4uc  1 a 1 44 ]
+"153
+} 0
+"161 /Users/timconsigny/Downloads/SOurce-2/Proto2_Magneto.X/DigitsDriver.c
+[v i1_display display `(v  1 e 0 0 ]
+{
+[v i1display@x3 display `i  1 a 2 13 ]
+[v i1display@x2 display `i  1 a 2 11 ]
+[v i1display@x1 display `i  1 a 2 9 ]
+[v i1display@x0 display `i  1 a 2 7 ]
+[v i1display@neg display `uc  1 a 1 6 ]
+[v i1display@x x `i  1 p 2 4 ]
+"221
+} 0
+"4 /Applications/microchip/xc8/v1.35/sources/common/Umul8.c
+[v i1___bmul __bmul `(uc  1 e 1 0 ]
+{
+[v i1___bmul@multiplier multiplier `uc  1 a 1 wreg ]
+[v i1___bmul@product __bmul `uc  1 a 1 3 ]
+[v i1___bmul@multiplier multiplier `uc  1 a 1 wreg ]
+[v i1___bmul@multiplicand multiplicand `uc  1 p 1 0 ]
+"6
+[v i1___bmul@multiplier multiplier `uc  1 a 1 2 ]
+"51
+} 0
+"6 /Applications/microchip/xc8/v1.35/sources/common/awmod.c
+[v i1___awmod __awmod `(i  1 e 2 0 ]
+{
+[v i1___awmod@sign __awmod `uc  1 a 1 6 ]
+[v i1___awmod@counter __awmod `uc  1 a 1 5 ]
+[v i1___awmod@divisor divisor `i  1 p 2 0 ]
+[v i1___awmod@dividend dividend `i  1 p 2 2 ]
+"35
+} 0
+"6 /Applications/microchip/xc8/v1.35/sources/common/awdiv.c
+[v i1___awdiv __awdiv `(i  1 e 2 0 ]
+{
+[v i1___awdiv@quotient __awdiv `i  1 a 2 2 ]
+[v i1___awdiv@sign __awdiv `uc  1 a 1 1 ]
+[v i1___awdiv@counter __awdiv `uc  1 a 1 0 ]
+[v i1___awdiv@divisor divisor `i  1 p 2 7 ]
+[v i1___awdiv@dividend dividend `i  1 p 2 9 ]
+"42
+} 0
+"5 /Applications/microchip/xc8/v1.35/sources/common/strtol.c
+[v _strtol strtol `(l  1 e 4 0 ]
+{
+[v strtol@s s `*.4DCCuc  1 a 1 wreg ]
+"7
+[v strtol@a a `l  1 a 4 9 ]
+"8
+[v strtol@c c `uc  1 a 1 14 ]
+[v strtol@sign sign `uc  1 a 1 8 ]
+"5
+[v strtol@s s `*.4DCCuc  1 a 1 wreg ]
+[v strtol@endptr endptr `*.4*.4uc  1 p 1 0 ]
+[v strtol@base base `i  1 p 2 1 ]
+[v strtol@s s `*.4DCCuc  1 a 1 13 ]
+"47
+} 0
+"5 /Applications/microchip/xc8/v1.35/sources/common/toupper.c
+[v _toupper toupper `(uc  1 e 1 0 ]
+{
+[v toupper@c c `uc  1 a 1 wreg ]
+[v toupper@c c `uc  1 a 1 wreg ]
+"10
+[v toupper@c c `uc  1 a 1 1 ]
+"13
+} 0
+"8 /Applications/microchip/xc8/v1.35/sources/common/isspace.c
+[v _isspace isspace `(b  1 e 0 0 ]
+{
+[v isspace@c c `uc  1 a 1 wreg ]
+[v isspace@c c `uc  1 a 1 wreg ]
+"14
+[v isspace@c c `uc  1 a 1 1 ]
+"15
+} 0
+"8 /Applications/microchip/xc8/v1.35/sources/common/isdigit.c
+[v _isdigit isdigit `(b  1 e 0 0 ]
+{
+[v isdigit@c c `uc  1 a 1 wreg ]
+[v isdigit@c c `uc  1 a 1 wreg ]
+"14
+[v isdigit@c c `uc  1 a 1 1 ]
+"15
+} 0
+"8 /Applications/microchip/xc8/v1.35/sources/common/isalpha.c
+[v _isalpha isalpha `(b  1 e 0 0 ]
+{
+[v isalpha@c c `uc  1 a 1 wreg ]
+[v isalpha@c c `uc  1 a 1 wreg ]
+"14
+[v isalpha@c c `uc  1 a 1 3 ]
+"15
+} 0
+"8 /Applications/microchip/xc8/v1.35/sources/common/isupper.c
+[v _isupper isupper `(b  1 e 0 0 ]
+{
+[v isupper@c c `uc  1 a 1 wreg ]
+[v isupper@c c `uc  1 a 1 wreg ]
+"14
+[v isupper@c c `uc  1 a 1 1 ]
+"15
+} 0
+"15 /Applications/microchip/xc8/v1.35/sources/common/Umul32.c
+[v ___lmul __lmul `(ul  1 e 4 0 ]
+{
+"17
+[v ___lmul@product product `ul  1 a 4 8 ]
+"15
+[v ___lmul@multiplier multiplier `ul  1 p 4 0 ]
+[v ___lmul@multiplicand multiplicand `ul  1 p 4 4 ]
+"129
+} 0
+"8 /Applications/microchip/xc8/v1.35/sources/common/strcpy.c
+[v _strcpy strcpy `(*.4uc  1 e 1 0 ]
+{
+[v strcpy@to to `*.4uc  1 a 1 wreg ]
+"15
+[v strcpy@cp cp `*.4uc  1 a 1 2 ]
+"8
+[v strcpy@to to `*.4uc  1 a 1 wreg ]
+[v strcpy@from from `*.4DCCuc  1 p 1 0 ]
+"18
+[v strcpy@to to `*.4uc  1 a 1 3 ]
+"24
+} 0
+"43 /Users/timconsigny/Downloads/SOurce-2/Proto2_Magneto.X/Switec_motor.c
+[v _goToPos goToPos `(v  1 e 0 0 ]
+{
+"45
+[v goToPos@target target `i  1 a 2 4 ]
+"43
+[v goToPos@pos pos `ui  1 p 2 2 ]
+"69
+} 0
+"21
+[v i1_stepCounterClock stepCounterClock `(v  1 e 0 0 ]
+{
+"32
+} 0
+"6
+[v _stepClock stepClock `(v  1 e 0 0 ]
+{
+"19
+} 0
