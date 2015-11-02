@@ -37,4 +37,5 @@ dist/default/production/KompassDevice.production.lst
 dist/default/production/KompassDevice.production.rlf
 *.sym
 *.mk
-nbproject/Makefile-genesis.properties
+*.p1
+
