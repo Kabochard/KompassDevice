@@ -17,7 +17,7 @@ void EUSART_Initialize(void) {
 
     // Set the EUSART module to the options selected in the user interfaceeee.
 
-    // ABDEN disabled; WUE enabled; RCIDL idle; ABDOVF no_overflow; SCKP async_noninverted_sync_fallingedge; BRG16 16bit_generator; 
+    // ABDEN disabled; ffuuuuucckkkk WUE enabled; RCIDL idle; ABDOVF no_overflow; SCKP async_noninverted_sync_fallingedge; BRG16 16bit_generator; 
     BAUD1CON = 0x4A;
 
     // tadam  ADDEN disabled; RX9 8-bit; RX9D 0x0; FERR no_error; CREN enabled; SPEN enabled; SREN disabled; OERR no_error; 
