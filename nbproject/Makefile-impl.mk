@@ -24,7 +24,7 @@ CLEAN_SUBPROJECTS=${CLEAN_SUBPROJECTS_${SUBPROJECTS}}
 
 
 # Project Name
-PROJECTNAME=Proto2_Magneto.X
+PROJECTNAME=KompassDevice
 
 # Active Configuration
 DEFAULTCONF=default
