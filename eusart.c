@@ -32,8 +32,11 @@ void EUSART_Initialize(void) {
     // Baud Rate = 115200; SPBRGH 0; 
     SP1BRGH = 0x00;
 
+    
     // enable receive interrupt
     PIE1bits.RCIE = 1;
+    
+    //????
 }
 
 /*void EUSART_Read(char *Output) 
