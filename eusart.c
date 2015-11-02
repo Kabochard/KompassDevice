@@ -5,7 +5,7 @@
 
 //#include "Switec_motor.h"
 
-static char console[10][16]; //Pour voir ce qu'il se passe en mode debug
+static char console[10][16]; //Pour voir ce qu'il se passe en mode debug et pis c tout
 
 static unsigned int lines=0;
 static unsigned int charac=0;
