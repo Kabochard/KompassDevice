@@ -4,7 +4,6 @@
 #include <stdlib.h>
 #include <string.h>
 
-#include "mcc_generated_files/mcc.h"
 #include "eusart.h"
 #include "interrupt_manager.h"
 #include "LSM303D.h"

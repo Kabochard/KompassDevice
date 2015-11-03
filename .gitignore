@@ -39,3 +39,8 @@ dist/default/production/KompassDevice.production.rlf
 *.mk
 *.p1
 
+*.p1
+build/default/production/eusart.pre
+*.d
+*.pre
+*.hxl
