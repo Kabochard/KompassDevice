@@ -1,6 +1,8 @@
 #include "needle.h"
 #include <xc.h>
 
+static char CurrentSlot;
+
 void initNeedle(void)
 {
     CurrentSlot = 0;

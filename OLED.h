@@ -1,3 +1,7 @@
+#ifndef OLED_H
+#define	OLED_H
+
+
 #include <xc.h>
 /************ OLED Display.h *********/
 #include <stdio.h>
@@ -106,13 +110,13 @@ void OLEDRectangular ( unsigned char x1, unsigned char y1, unsigned char x2, uns
 void OLEDCircle ( int x, int y, int radius, char fill, char color );
 void OLEDBar ( int x1, int y1, int x2, int y2, int width, char color );
 void OLEDAreaFill ( unsigned char x1, unsigned char y1, unsigned char x2, unsigned char y2, unsigned char fill, char color );
-//void OLEDText ( int x, int y, char* textptr, int size, char color );
+void OLEDText ( int x, int y, char* textptr, int size, char color );
 
 void ODOpaste(char digit);
 void ODOScroll_units(unsigned int position);
 void ODOScroll_tens(unsigned int position);
 
-/*const char TEXT[51][5] = 
+const char TEXT[51][5] = 
 {0x00, 0x00, 0x00, 0x00, 0x00, // SPACE
 0x00, 0x00, 0x5F, 0x00, 0x00, // !
 0x00, 0x03, 0x00, 0x03, 0x00, // "
@@ -208,7 +212,7 @@ const char TEXT2[44][5]={0x26, 0x49, 0x49, 0x49, 0x32, // S
 0x00, 0x00, 0x7F, 0x00, 0x00, // |
 0x41, 0x41, 0x36, 0x08, 0x00, // }
 0x02, 0x01, 0x02, 0x04, 0x02};// ~
-*/
+
 
 const char ODOFonts[12][26]={
   	0xE0,0xFC,0xFE,0xFF,0x1F,0x0F,0x0F,0x1F,0xFF,0xFE,0xFC,0xE0,
@@ -719,7 +723,7 @@ void OLEDBar ( int x1, int y1, int x2, int y2, int width, char color )
 
 
 
-/*
+
  void OLEDText ( int x, int y, char* textptr, int size, char color )
 {
 	unsigned char i, j, k, l, m;						// Loop counters
@@ -767,7 +771,7 @@ void OLEDBar ( int x1, int y1, int x2, int y2, int width, char color )
 			}
 		}
 	}
-*/
+
 
 void ODOpaste(char digit)
 {
@@ -834,3 +838,5 @@ void ODOScroll_tens(unsigned int position)
     }
 
 }
+
+#endif

@@ -15,7 +15,7 @@ void moveNeedle(int n);
 char AngleToSlot(int Angle);
 void MoveOneStepToSlot(char target);
 
-static char CurrentSlot;
+
 
 #endif	/* NEEDLE_H */
 

@@ -1,0 +1,884 @@
+[p LITE_MODE AUTOSTATIC PIC14 PIC14E ]
+[d version 1.1 ]
+[d edition pro ]
+[d chip 16LF1939 ]
+[d frameptr 6 ]
+"4 C:\Program Files (x86)\Microchip\xc8\v1.35\sources\common\abs.c
+[v _abs abs `(i  1 e 2 0 ]
+"8 C:\Program Files (x86)\Microchip\xc8\v1.35\sources\common\atan.c
+[v _atan atan `(d  1 e 3 0 ]
+"8 C:\Program Files (x86)\Microchip\xc8\v1.35\sources\common\atan2.c
+[v _atan2 atan2 `(d  1 e 3 0 ]
+"6 C:\Program Files (x86)\Microchip\xc8\v1.35\sources\common\awdiv.c
+[v ___awdiv __awdiv `(i  1 e 2 0 ]
+[v i1___awdiv __awdiv `(i  1 e 2 0 ]
+"6 C:\Program Files (x86)\Microchip\xc8\v1.35\sources\common\awmod.c
+[v ___awmod __awmod `(i  1 e 2 0 ]
+"32 C:\Program Files (x86)\Microchip\xc8\v1.35\sources\common\awtoft.c
+[v ___awtoft __awtoft `(f  1 e 3 0 ]
+"464 C:\Program Files (x86)\Microchip\xc8\v1.35\sources\common\doprnt.c
+[v _printf printf `(i  1 e 2 0 ]
+"4 C:\Program Files (x86)\Microchip\xc8\v1.35\sources\common\evalpoly.c
+[v _eval_poly eval_poly `(d  1 e 3 0 ]
+"4 C:\Program Files (x86)\Microchip\xc8\v1.35\sources\common\fabs.c
+[v _fabs fabs `(d  1 e 3 0 ]
+"62 C:\Program Files (x86)\Microchip\xc8\v1.35\sources\common\float.c
+[v ___ftpack __ftpack `(f  1 e 3 0 ]
+"86 C:\Program Files (x86)\Microchip\xc8\v1.35\sources\common\ftadd.c
+[v ___ftadd __ftadd `(f  1 e 3 0 ]
+"56 C:\Program Files (x86)\Microchip\xc8\v1.35\sources\common\ftdiv.c
+[v ___ftdiv __ftdiv `(f  1 e 3 0 ]
+"4 C:\Program Files (x86)\Microchip\xc8\v1.35\sources\common\ftge.c
+[v ___ftge __ftge `(b  1 e 0 0 ]
+"62 C:\Program Files (x86)\Microchip\xc8\v1.35\sources\common\ftmul.c
+[v ___ftmul __ftmul `(f  1 e 3 0 ]
+"15 C:\Program Files (x86)\Microchip\xc8\v1.35\sources\common\ftneg.c
+[v ___ftneg __ftneg `(f  1 e 3 0 ]
+"18 C:\Program Files (x86)\Microchip\xc8\v1.35\sources\common\ftsub.c
+[v ___ftsub __ftsub `(f  1 e 3 0 ]
+"44 C:\Program Files (x86)\Microchip\xc8\v1.35\sources\common\fttol.c
+[v ___fttol __fttol `(l  1 e 4 0 ]
+"8 C:\Program Files (x86)\Microchip\xc8\v1.35\sources\common\isalpha.c
+[v _isalpha isalpha `(b  1 e 0 0 ]
+"8 C:\Program Files (x86)\Microchip\xc8\v1.35\sources\common\isdigit.c
+[v _isdigit isdigit `(b  1 e 0 0 ]
+[v i1_isdigit isdigit `(b  1 e 0 0 ]
+"8 C:\Program Files (x86)\Microchip\xc8\v1.35\sources\common\isspace.c
+[v _isspace isspace `(b  1 e 0 0 ]
+"8 C:\Program Files (x86)\Microchip\xc8\v1.35\sources\common\isupper.c
+[v _isupper isupper `(b  1 e 0 0 ]
+"6 C:\Program Files (x86)\Microchip\xc8\v1.35\sources\common\lwdiv.c
+[v ___lwdiv __lwdiv `(ui  1 e 2 0 ]
+"8 C:\Program Files (x86)\Microchip\xc8\v1.35\sources\common\memset.c
+[v _memset memset `(*.4v  1 e 1 0 ]
+"5 C:\Program Files (x86)\Microchip\xc8\v1.35\sources\common\strtol.c
+[v _strtol strtol `(l  1 e 4 0 ]
+"5 C:\Program Files (x86)\Microchip\xc8\v1.35\sources\common\toupper.c
+[v _toupper toupper `(uc  1 e 1 0 ]
+"15 C:\Program Files (x86)\Microchip\xc8\v1.35\sources\common\Umul16.c
+[v ___wmul __wmul `(ui  1 e 2 0 ]
+[v i1___wmul __wmul `(ui  1 e 2 0 ]
+"15 C:\Program Files (x86)\Microchip\xc8\v1.35\sources\common\Umul32.c
+[v ___lmul __lmul `(ul  1 e 4 0 ]
+"6 C:\Program Files (x86)\Microchip\xc8\v1.35\sources\pic\eeprom.c
+[v _eecpymem eecpymem `(v  1 e 0 0 ]
+"24
+[v _memcpyee memcpyee `(v  1 e 0 0 ]
+"20 D:\Documents\repo\KompassDevice\eusart.c
+[v _EUSART_Initialize EUSART_Initialize `(v  1 e 0 0 ]
+"63
+[v _EUSART_Receive_ISR EUSART_Receive_ISR `(v  1 e 0 0 ]
+"133
+[v _putch putch `(v  1 e 0 0 ]
+"5 D:\Documents\repo\KompassDevice\i2c.c
+[v _i2c_Init i2c_Init `(v  1 e 0 0 ]
+"22
+[v _i2c_Wait i2c_Wait `(v  1 e 0 0 ]
+[v i1_i2c_Wait i2c_Wait `(v  1 e 0 0 ]
+"27
+[v _i2c_Start i2c_Start `(v  1 e 0 0 ]
+[v i1_i2c_Start i2c_Start `(v  1 e 0 0 ]
+"34
+[v _i2c_Restart i2c_Restart `(v  1 e 0 0 ]
+"40
+[v _i2c_Stop i2c_Stop `(v  1 e 0 0 ]
+[v i1_i2c_Stop i2c_Stop `(v  1 e 0 0 ]
+"47
+[v _i2c_Write i2c_Write `(v  1 e 0 0 ]
+[v i1_i2c_Write i2c_Write `(v  1 e 0 0 ]
+"55
+[v _i2c_Address i2c_Address `(v  1 e 0 0 ]
+[v i1_i2c_Address i2c_Address `(v  1 e 0 0 ]
+"66
+[v _i2c_Read i2c_Read `(uc  1 e 1 0 ]
+"4 D:\Documents\repo\KompassDevice\interrupt_manager.c
+[v _INTERRUPT_InterruptManager INTERRUPT_InterruptManager `II(v  1 e 0 0 ]
+"19 D:\Documents\repo\KompassDevice\LSM303D.c
+[v _LSM303D_Write LSM303D_Write `(v  1 e 0 0 ]
+"29
+[v _LSM303D_Read_M LSM303D_Read_M `(v  1 e 0 0 ]
+"28 D:\Documents\repo\KompassDevice\main.c
+[v _main main `(v  1 e 0 0 ]
+"6 D:\Documents\repo\KompassDevice\needle.c
+[v _initNeedle initNeedle `(v  1 e 0 0 ]
+"13
+[v _swithcAllInductanceOff swithcAllInductanceOff `(v  1 e 0 0 ]
+[v i1_swithcAllInductanceOff swithcAllInductanceOff `(v  1 e 0 0 ]
+"21
+[v _SwitchOnInductandce SwitchOnInductandce `(v  1 e 0 0 ]
+[v i1_SwitchOnInductandce SwitchOnInductandce `(v  1 e 0 0 ]
+"61
+[v _moveNeedle moveNeedle `(v  1 e 0 0 ]
+[v i1_moveNeedle moveNeedle `(v  1 e 0 0 ]
+"72
+[v _AngleToSlot AngleToSlot `(uc  1 e 1 0 ]
+"246 D:\Documents\repo\KompassDevice\OLED.h
+[v _OLEDSetUp OLEDSetUp `(i  1 e 2 0 ]
+"294
+[v _OLEDCommand OLEDCommand `(v  1 e 0 0 ]
+[v i1_OLEDCommand OLEDCommand `(v  1 e 0 0 ]
+"307
+[v _OLEDData OLEDData `(v  1 e 0 0 ]
+"320
+[v _OLEDPixel OLEDPixel `(v  1 e 0 0 ]
+"404
+[v _OLEDClearBuffer OLEDClearBuffer `(v  1 e 0 0 ]
+"420
+[v _OLEDUpdateDisplay OLEDUpdateDisplay `(v  1 e 0 0 ]
+"488
+[v _OLEDLine OLEDLine `(v  1 e 0 0 ]
+"727
+[v _OLEDText OLEDText `(v  1 e 0 0 ]
+"27 D:\Documents\repo\KompassDevice\system_init.c
+[v _SYSTEM_Initialize SYSTEM_Initialize `(v  1 e 0 0 ]
+"35
+[v _OSCILLATOR_Initialize OSCILLATOR_Initialize `(v  1 e 0 0 ]
+"46
+[v _PIN_MANAGER_Initialize PIN_MANAGER_Initialize `(v  1 e 0 0 ]
+[s S31 . 1 `uc 1 IOCIF 1 0 :1:0 
+`uc 1 INTF 1 0 :1:1 
+`uc 1 TMR0IF 1 0 :1:2 
+`uc 1 IOCIE 1 0 :1:3 
+`uc 1 INTE 1 0 :1:4 
+`uc 1 TMR0IE 1 0 :1:5 
+`uc 1 PEIE 1 0 :1:6 
+`uc 1 GIE 1 0 :1:7 
+]
+"360 C:\Program Files (x86)\Microchip\xc8\v1.35\include\pic16lf1939.h
+[s S40 . 1 `uc 1 . 1 0 :2:0 
+`uc 1 T0IF 1 0 :1:2 
+`uc 1 . 1 0 :2:3 
+`uc 1 T0IE 1 0 :1:5 
+]
+[u S45 . 1 `S31 1 . 1 0 `S40 1 . 1 0 ]
+[v _INTCONbits INTCONbits `VES45  1 e 1 @11 ]
+"414
+[v _PORTA PORTA `VEuc  1 e 1 @12 ]
+"536
+[v _PORTC PORTC `VEuc  1 e 1 @14 ]
+"597
+[v _PORTD PORTD `VEuc  1 e 1 @15 ]
+[s S118 . 1 `uc 1 RD0 1 0 :1:0 
+`uc 1 RD1 1 0 :1:1 
+`uc 1 RD2 1 0 :1:2 
+`uc 1 RD3 1 0 :1:3 
+`uc 1 RD4 1 0 :1:4 
+`uc 1 RD5 1 0 :1:5 
+`uc 1 RD6 1 0 :1:6 
+`uc 1 RD7 1 0 :1:7 
+]
+"614
+[u S127 . 1 `S118 1 . 1 0 ]
+[v _PORTDbits PORTDbits `VES127  1 e 1 @15 ]
+"658
+[v _PORTE PORTE `VEuc  1 e 1 @16 ]
+[s S484 . 1 `uc 1 TMR1IF 1 0 :1:0 
+`uc 1 TMR2IF 1 0 :1:1 
+`uc 1 CCP1IF 1 0 :1:2 
+`uc 1 SSPIF 1 0 :1:3 
+`uc 1 TXIF 1 0 :1:4 
+`uc 1 RCIF 1 0 :1:5 
+`uc 1 ADIF 1 0 :1:6 
+`uc 1 TMR1GIF 1 0 :1:7 
+]
+"712
+[u S493 . 1 `S484 1 . 1 0 ]
+[v _PIR1bits PIR1bits `VES493  1 e 1 @17 ]
+"1279
+[v _TRISA TRISA `VEuc  1 e 1 @140 ]
+"1340
+[v _TRISB TRISB `VEuc  1 e 1 @141 ]
+"1401
+[v _TRISC TRISC `VEuc  1 e 1 @142 ]
+"1462
+[v _TRISD TRISD `VEuc  1 e 1 @143 ]
+"1523
+[v _TRISE TRISE `VEuc  1 e 1 @144 ]
+[s S176 . 1 `uc 1 TMR1IE 1 0 :1:0 
+`uc 1 TMR2IE 1 0 :1:1 
+`uc 1 CCP1IE 1 0 :1:2 
+`uc 1 SSPIE 1 0 :1:3 
+`uc 1 TXIE 1 0 :1:4 
+`uc 1 RCIE 1 0 :1:5 
+`uc 1 ADIE 1 0 :1:6 
+`uc 1 TMR1GIE 1 0 :1:7 
+]
+"1577
+[u S185 . 1 `S176 1 . 1 0 ]
+[v _PIE1bits PIE1bits `VES185  1 e 1 @145 ]
+[s S661 . 1 `uc 1 PS0 1 0 :1:0 
+`uc 1 PS1 1 0 :1:1 
+`uc 1 PS2 1 0 :1:2 
+`uc 1 PSA 1 0 :1:3 
+`uc 1 TMR0SE 1 0 :1:4 
+`uc 1 TMR0CS 1 0 :1:5 
+`uc 1 INTEDG 1 0 :1:6 
+`uc 1 nWPUEN 1 0 :1:7 
+]
+"1745
+[s S670 . 1 `uc 1 PS 1 0 :3:0 
+`uc 1 . 1 0 :1:3 
+`uc 1 T0SE 1 0 :1:4 
+`uc 1 T0CS 1 0 :1:5 
+]
+[u S675 . 1 `S661 1 . 1 0 `S670 1 . 1 0 ]
+[v _OPTION_REGbits OPTION_REGbits `VES675  1 e 1 @149 ]
+"1912
+[v _OSCTUNE OSCTUNE `VEuc  1 e 1 @152 ]
+"1969
+[v _OSCCON OSCCON `VEuc  1 e 1 @153 ]
+"2040
+[v _OSCSTAT OSCSTAT `VEuc  1 e 1 @154 ]
+"2304
+[v _LATA LATA `VEuc  1 e 1 @268 ]
+"2365
+[v _LATB LATB `VEuc  1 e 1 @269 ]
+"2426
+[v _LATC LATC `VEuc  1 e 1 @270 ]
+"2487
+[v _LATD LATD `VEuc  1 e 1 @271 ]
+"2556
+[v _LATE LATE `VEuc  1 e 1 @272 ]
+"3203
+[v _APFCON APFCON `VEuc  1 e 1 @285 ]
+"3258
+[v _ANSELA ANSELA `VEuc  1 e 1 @396 ]
+"3315
+[v _ANSELB ANSELB `VEuc  1 e 1 @397 ]
+"3372
+[v _ANSELD ANSELD `VEuc  1 e 1 @399 ]
+"3441
+[v _ANSELE ANSELE `VEuc  1 e 1 @400 ]
+"3666
+[v _RCREG RCREG `VEuc  1 e 1 @409 ]
+"3685
+[v _TXREG TXREG `VEuc  1 e 1 @410 ]
+"3719
+[v _SPBRGL SPBRGL `VEuc  1 e 1 @411 ]
+"3768
+[v _SPBRGH SPBRGH `VEuc  1 e 1 @412 ]
+"3800
+[v _RCSTA RCSTA `VEuc  1 e 1 @413 ]
+[s S202 . 1 `uc 1 RX9D 1 0 :1:0 
+`uc 1 OERR 1 0 :1:1 
+`uc 1 FERR 1 0 :1:2 
+`uc 1 ADDEN 1 0 :1:3 
+`uc 1 CREN 1 0 :1:4 
+`uc 1 SREN 1 0 :1:5 
+`uc 1 RX9 1 0 :1:6 
+`uc 1 SPEN 1 0 :1:7 
+]
+"3817
+[u S211 . 1 `S202 1 . 1 0 ]
+[v _RCSTAbits RCSTAbits `VES211  1 e 1 @413 ]
+"3861
+[v _TXSTA TXSTA `VEuc  1 e 1 @414 ]
+[s S248 . 1 `uc 1 TX9D 1 0 :1:0 
+`uc 1 TRMT 1 0 :1:1 
+`uc 1 BRGH 1 0 :1:2 
+`uc 1 SENDB 1 0 :1:3 
+`uc 1 SYNC 1 0 :1:4 
+`uc 1 TXEN 1 0 :1:5 
+`uc 1 TX9 1 0 :1:6 
+`uc 1 CSRC 1 0 :1:7 
+]
+"3878
+[u S257 . 1 `S248 1 . 1 0 ]
+[v _TXSTAbits TXSTAbits `VES257  1 e 1 @414 ]
+"3922
+[v _BAUDCON BAUDCON `VEuc  1 e 1 @415 ]
+"3973
+[v _WPUB WPUB `VEuc  1 e 1 @525 ]
+"4042
+[v _WPUE WPUE `VEuc  1 e 1 @528 ]
+"4062
+[v _SSPBUF SSPBUF `VEuc  1 e 1 @529 ]
+"4081
+[v _SSPADD SSPADD `VEuc  1 e 1 @530 ]
+"4119
+[v _SSPSTAT SSPSTAT `VEuc  1 e 1 @532 ]
+"4180
+[v _SSPCON1 SSPCON1 `VEuc  1 e 1 @533 ]
+"4301
+[v _SSPCON2 SSPCON2 `VEuc  1 e 1 @534 ]
+"7634
+[v _ACKDT ACKDT `VEb  1 e 0 @4277 ]
+"7636
+[v _ACKEN ACKEN `VEb  1 e 0 @4276 ]
+"8310
+[v _PEN PEN `VEb  1 e 0 @4274 ]
+"8346
+[v _RA0 RA0 `VEb  1 e 0 @96 ]
+"8348
+[v _RA1 RA1 `VEb  1 e 0 @97 ]
+"8350
+[v _RA2 RA2 `VEb  1 e 0 @98 ]
+"8352
+[v _RA3 RA3 `VEb  1 e 0 @99 ]
+"8354
+[v _RA4 RA4 `VEb  1 e 0 @100 ]
+"8356
+[v _RA5 RA5 `VEb  1 e 0 @101 ]
+"8358
+[v _RA6 RA6 `VEb  1 e 0 @102 ]
+"8360
+[v _RA7 RA7 `VEb  1 e 0 @103 ]
+"8378
+[v _RC0 RC0 `VEb  1 e 0 @112 ]
+"8380
+[v _RC1 RC1 `VEb  1 e 0 @113 ]
+"8382
+[v _RC2 RC2 `VEb  1 e 0 @114 ]
+"8388
+[v _RC5 RC5 `VEb  1 e 0 @117 ]
+"8394
+[v _RCEN RCEN `VEb  1 e 0 @4275 ]
+"8404
+[v _RD0 RD0 `VEb  1 e 0 @120 ]
+"8406
+[v _RD1 RD1 `VEb  1 e 0 @121 ]
+"8420
+[v _RE0 RE0 `VEb  1 e 0 @128 ]
+"8422
+[v _RE1 RE1 `VEb  1 e 0 @129 ]
+"8424
+[v _RE2 RE2 `VEb  1 e 0 @130 ]
+"8428
+[v _RSEN RSEN `VEb  1 e 0 @4273 ]
+"8690
+[v _SEN SEN `VEb  1 e 0 @4272 ]
+"8946
+[v _TRISC3 TRISC3 `VEb  1 e 0 @1139 ]
+"8948
+[v _TRISC4 TRISC4 `VEb  1 e 0 @1140 ]
+"362 C:\Program Files (x86)\Microchip\xc8\v1.35\sources\common\doprnt.c
+[v _hexpowers hexpowers `DCC[4]ui  1 s 8 hexpowers ]
+"3 C:\Program Files (x86)\Microchip\xc8\v1.35\sources\common\errno.c
+[v _errno errno `i  1 e 2 0 ]
+"11 D:\Documents\repo\KompassDevice\eusart.c
+[v _console console `[10][16]uc  1 s 160 console ]
+"12
+[v _line line `[16]uc  1 s 16 line ]
+"13
+[v _idex idex `i  1 s 2 idex ]
+"14
+[v _distance distance `i  1 s 2 distance ]
+"15
+[v _bearing bearing `i  1 s 2 bearing ]
+"137 D:\Documents\repo\KompassDevice\LSM303D.h
+[v _mX mX `i  1 e 2 0 ]
+[v _mY mY `i  1 e 2 0 ]
+[v _mZ mZ `i  1 e 2 0 ]
+[v _aX aX `i  1 e 2 0 ]
+[v _aY aY `i  1 e 2 0 ]
+[v _aZ aZ `i  1 e 2 0 ]
+"138
+[v _Xsf Xsf `f  1 e 3 0 ]
+[v _Ysf Ysf `f  1 e 3 0 ]
+[v _Xoff Xoff `f  1 e 3 0 ]
+[v _Yoff Yoff `f  1 e 3 0 ]
+"21 D:\Documents\repo\KompassDevice\main.c
+[v _MagAngle MagAngle `i  1 e 2 0 ]
+"4 D:\Documents\repo\KompassDevice\needle.c
+[v _CurrentSlot CurrentSlot `uc  1 s 1 CurrentSlot ]
+"22 D:\Documents\repo\KompassDevice\OLED.h
+[v _TEST TEST `[2][96]uc  1 e 192 @8848 ]
+"119
+[v _TEXT TEXT `DCC[51][5]uc  1 e 255 0 ]
+"171
+[v _TEXT2 TEXT2 `DCC[44][5]uc  1 e 220 0 ]
+"217
+[v _ODOFonts ODOFonts `DCC[12][26]uc  1 e 312 0 ]
+"28 D:\Documents\repo\KompassDevice\main.c
+[v _main main `(v  1 e 0 0 ]
+{
+"141
+} 0
+"464 C:\Program Files (x86)\Microchip\xc8\v1.35\sources\common\doprnt.c
+[v _printf printf `(i  1 e 2 0 ]
+{
+"1500
+[v printf@idx idx `uc  1 a 1 17 ]
+"501
+[v printf@width width `i  1 a 2 22 ]
+"528
+[v printf@val val `ui  1 a 2 19 ]
+"499
+[v printf@c c `c  1 a 1 24 ]
+"506
+[v printf@prec prec `c  1 a 1 21 ]
+"466
+[v printf@ap ap `[1]*.4v  1 a 1 18 ]
+"508
+[v printf@flag flag `uc  1 a 1 16 ]
+"464
+[v printf@f f `*.25DCCuc  1 p 2 8 ]
+"1541
+} 0
+"133 D:\Documents\repo\KompassDevice\eusart.c
+[v _putch putch `(v  1 e 0 0 ]
+{
+[v putch@byte byte `uc  1 a 1 wreg ]
+[v putch@byte byte `uc  1 a 1 wreg ]
+[v putch@byte byte `uc  1 a 1 0 ]
+"138
+} 0
+"8 C:\Program Files (x86)\Microchip\xc8\v1.35\sources\common\isdigit.c
+[v _isdigit isdigit `(b  1 e 0 0 ]
+{
+[v isdigit@c c `uc  1 a 1 wreg ]
+[v isdigit@c c `uc  1 a 1 wreg ]
+"14
+[v isdigit@c c `uc  1 a 1 1 ]
+"15
+} 0
+"15 C:\Program Files (x86)\Microchip\xc8\v1.35\sources\common\Umul16.c
+[v ___wmul __wmul `(ui  1 e 2 0 ]
+{
+"17
+[v ___wmul@product product `ui  1 a 2 4 ]
+"15
+[v ___wmul@multiplier multiplier `ui  1 p 2 0 ]
+[v ___wmul@multiplicand multiplicand `ui  1 p 2 2 ]
+"53
+} 0
+"6 C:\Program Files (x86)\Microchip\xc8\v1.35\sources\common\lwdiv.c
+[v ___lwdiv __lwdiv `(ui  1 e 2 0 ]
+{
+"11
+[v ___lwdiv@quotient quotient `ui  1 a 2 5 ]
+"12
+[v ___lwdiv@counter counter `uc  1 a 1 7 ]
+"6
+[v ___lwdiv@divisor divisor `ui  1 p 2 0 ]
+[v ___lwdiv@dividend dividend `ui  1 p 2 2 ]
+"31
+} 0
+"6 D:\Documents\repo\KompassDevice\needle.c
+[v _initNeedle initNeedle `(v  1 e 0 0 ]
+{
+"11
+} 0
+"61
+[v _moveNeedle moveNeedle `(v  1 e 0 0 ]
+{
+[v moveNeedle@n n `i  1 p 2 11 ]
+"70
+} 0
+"13
+[v _swithcAllInductanceOff swithcAllInductanceOff `(v  1 e 0 0 ]
+{
+"19
+} 0
+"6 C:\Program Files (x86)\Microchip\xc8\v1.35\sources\common\awdiv.c
+[v ___awdiv __awdiv `(i  1 e 2 0 ]
+{
+"11
+[v ___awdiv@quotient quotient `i  1 a 2 7 ]
+"12
+[v ___awdiv@sign sign `uc  1 a 1 6 ]
+[v ___awdiv@counter counter `uc  1 a 1 5 ]
+"6
+[v ___awdiv@divisor divisor `i  1 p 2 0 ]
+[v ___awdiv@dividend dividend `i  1 p 2 2 ]
+"42
+} 0
+"21 D:\Documents\repo\KompassDevice\needle.c
+[v _SwitchOnInductandce SwitchOnInductandce `(v  1 e 0 0 ]
+{
+[v SwitchOnInductandce@i i `i  1 p 2 9 ]
+"59
+} 0
+"27 D:\Documents\repo\KompassDevice\system_init.c
+[v _SYSTEM_Initialize SYSTEM_Initialize `(v  1 e 0 0 ]
+{
+"33
+} 0
+"5 D:\Documents\repo\KompassDevice\i2c.c
+[v _i2c_Init i2c_Init `(v  1 e 0 0 ]
+{
+"19
+} 0
+"46 D:\Documents\repo\KompassDevice\system_init.c
+[v _PIN_MANAGER_Initialize PIN_MANAGER_Initialize `(v  1 e 0 0 ]
+{
+"74
+} 0
+"35
+[v _OSCILLATOR_Initialize OSCILLATOR_Initialize `(v  1 e 0 0 ]
+{
+"44
+} 0
+"20 D:\Documents\repo\KompassDevice\eusart.c
+[v _EUSART_Initialize EUSART_Initialize `(v  1 e 0 0 ]
+{
+"47
+} 0
+"246 D:\Documents\repo\KompassDevice\OLED.h
+[v _OLEDSetUp OLEDSetUp `(i  1 e 2 0 ]
+{
+"291
+} 0
+"294
+[v _OLEDCommand OLEDCommand `(v  1 e 0 0 ]
+{
+[v OLEDCommand@c c `uc  1 a 1 wreg ]
+"296
+[v OLEDCommand@command command `uc  1 a 1 5 ]
+"294
+[v OLEDCommand@c c `uc  1 a 1 wreg ]
+"296
+[v OLEDCommand@c c `uc  1 a 1 4 ]
+"303
+} 0
+"47 D:\Documents\repo\KompassDevice\i2c.c
+[v _i2c_Write i2c_Write `(v  1 e 0 0 ]
+{
+[v i2c_Write@data data `uc  1 a 1 wreg ]
+[v i2c_Write@data data `uc  1 a 1 wreg ]
+"49
+[v i2c_Write@data data `uc  1 a 1 0 ]
+"51
+} 0
+"40
+[v _i2c_Stop i2c_Stop `(v  1 e 0 0 ]
+{
+"44
+} 0
+"27
+[v _i2c_Start i2c_Start `(v  1 e 0 0 ]
+{
+"31
+} 0
+"55
+[v _i2c_Address i2c_Address `(v  1 e 0 0 ]
+{
+[v i2c_Address@address address `uc  1 a 1 wreg ]
+"57
+[v i2c_Address@l_address l_address `uc  1 a 1 3 ]
+"55
+[v i2c_Address@address address `uc  1 a 1 wreg ]
+[v i2c_Address@mode mode `uc  1 p 1 0 ]
+"59
+[v i2c_Address@address address `uc  1 a 1 2 ]
+"63
+} 0
+"22
+[v _i2c_Wait i2c_Wait `(v  1 e 0 0 ]
+{
+"24
+} 0
+"4 D:\Documents\repo\KompassDevice\interrupt_manager.c
+[v _INTERRUPT_InterruptManager INTERRUPT_InterruptManager `II(v  1 e 0 0 ]
+{
+"14
+} 0
+"63 D:\Documents\repo\KompassDevice\eusart.c
+[v _EUSART_Receive_ISR EUSART_Receive_ISR `(v  1 e 0 0 ]
+{
+"90
+[v EUSART_Receive_ISR@distArr distArr `[9]uc  1 a 9 44 ]
+"91
+[v EUSART_Receive_ISR@bearingArr bearingArr `[4]uc  1 a 4 40 ]
+"109
+[v EUSART_Receive_ISR@ptr ptr `*.4uc  1 a 1 53 ]
+"65
+[v EUSART_Receive_ISR@incoming incoming `uc  1 a 1 54 ]
+"128
+} 0
+"61 D:\Documents\repo\KompassDevice\needle.c
+[v i1_moveNeedle moveNeedle `(v  1 e 0 0 ]
+{
+[v i1moveNeedle@n n `i  1 p 2 32 ]
+"70
+} 0
+"13
+[v i1_swithcAllInductanceOff swithcAllInductanceOff `(v  1 e 0 0 ]
+{
+"19
+} 0
+"21
+[v i1_SwitchOnInductandce SwitchOnInductandce `(v  1 e 0 0 ]
+{
+[v i1SwitchOnInductandce@i i `i  1 p 2 9 ]
+"59
+} 0
+"5 C:\Program Files (x86)\Microchip\xc8\v1.35\sources\common\strtol.c
+[v _strtol strtol `(l  1 e 4 0 ]
+{
+[v strtol@s s `*.4DCCuc  1 a 1 wreg ]
+"7
+[v strtol@a a `l  1 a 4 9 ]
+"8
+[v strtol@c c `uc  1 a 1 14 ]
+[v strtol@sign sign `uc  1 a 1 8 ]
+"5
+[v strtol@s s `*.4DCCuc  1 a 1 wreg ]
+[v strtol@endptr endptr `*.4*.4uc  1 p 1 0 ]
+[v strtol@base base `i  1 p 2 1 ]
+[v strtol@s s `*.4DCCuc  1 a 1 13 ]
+"47
+} 0
+"8 C:\Program Files (x86)\Microchip\xc8\v1.35\sources\common\isdigit.c
+[v i1_isdigit isdigit `(b  1 e 0 0 ]
+{
+[v i1isdigit@c c `uc  1 a 1 wreg ]
+[v i1isdigit@c c `uc  1 a 1 wreg ]
+"14
+[v i1isdigit@c c `uc  1 a 1 1 ]
+"15
+} 0
+"5 C:\Program Files (x86)\Microchip\xc8\v1.35\sources\common\toupper.c
+[v _toupper toupper `(uc  1 e 1 0 ]
+{
+[v toupper@c c `uc  1 a 1 wreg ]
+[v toupper@c c `uc  1 a 1 wreg ]
+"10
+[v toupper@c c `uc  1 a 1 1 ]
+"13
+} 0
+"8 C:\Program Files (x86)\Microchip\xc8\v1.35\sources\common\isspace.c
+[v _isspace isspace `(b  1 e 0 0 ]
+{
+[v isspace@c c `uc  1 a 1 wreg ]
+[v isspace@c c `uc  1 a 1 wreg ]
+"14
+[v isspace@c c `uc  1 a 1 1 ]
+"15
+} 0
+"8 C:\Program Files (x86)\Microchip\xc8\v1.35\sources\common\isalpha.c
+[v _isalpha isalpha `(b  1 e 0 0 ]
+{
+[v isalpha@c c `uc  1 a 1 wreg ]
+[v isalpha@c c `uc  1 a 1 wreg ]
+"14
+[v isalpha@c c `uc  1 a 1 3 ]
+"15
+} 0
+"8 C:\Program Files (x86)\Microchip\xc8\v1.35\sources\common\isupper.c
+[v _isupper isupper `(b  1 e 0 0 ]
+{
+[v isupper@c c `uc  1 a 1 wreg ]
+[v isupper@c c `uc  1 a 1 wreg ]
+"14
+[v isupper@c c `uc  1 a 1 1 ]
+"15
+} 0
+"15 C:\Program Files (x86)\Microchip\xc8\v1.35\sources\common\Umul32.c
+[v ___lmul __lmul `(ul  1 e 4 0 ]
+{
+"17
+[v ___lmul@product product `ul  1 a 4 8 ]
+"15
+[v ___lmul@multiplier multiplier `ul  1 p 4 0 ]
+[v ___lmul@multiplicand multiplicand `ul  1 p 4 4 ]
+"129
+} 0
+"8 C:\Program Files (x86)\Microchip\xc8\v1.35\sources\common\memset.c
+[v _memset memset `(*.4v  1 e 1 0 ]
+{
+[v memset@p1 p1 `*.4v  1 a 1 wreg ]
+"15
+[v memset@p p `*.4uc  1 a 1 5 ]
+"8
+[v memset@p1 p1 `*.4v  1 a 1 wreg ]
+[v memset@c c `i  1 p 2 0 ]
+[v memset@n n `ui  1 p 2 2 ]
+"18
+[v memset@p1 p1 `*.4v  1 a 1 6 ]
+"22
+} 0
+"420 D:\Documents\repo\KompassDevice\OLED.h
+[v _OLEDUpdateDisplay OLEDUpdateDisplay `(v  1 e 0 0 ]
+{
+[v OLEDUpdateDisplay@clear clear `uc  1 a 1 wreg ]
+"423
+[v OLEDUpdateDisplay@ptr ptr `*.39uc  1 a 2 6 ]
+"422
+[v OLEDUpdateDisplay@PageAddress PageAddress `uc  1 a 1 10 ]
+[v OLEDUpdateDisplay@ColumnAddress ColumnAddress `uc  1 a 1 9 ]
+"420
+[v OLEDUpdateDisplay@clear clear `uc  1 a 1 wreg ]
+"425
+[v OLEDUpdateDisplay@clear clear `uc  1 a 1 8 ]
+"459
+} 0
+"404
+[v _OLEDClearBuffer OLEDClearBuffer `(v  1 e 0 0 ]
+{
+"406
+[v OLEDClearBuffer@ptr ptr `*.39uc  1 a 2 10 ]
+"407
+[v OLEDClearBuffer@PageAddress PageAddress `uc  1 a 1 13 ]
+[v OLEDClearBuffer@ColumnAddress ColumnAddress `uc  1 a 1 12 ]
+"415
+} 0
+"727
+[v _OLEDText OLEDText `(v  1 e 0 0 ]
+{
+"730
+[v OLEDText@pixelData pixelData `[5]uc  1 a 5 26 ]
+"729
+[v OLEDText@i i `uc  1 a 1 37 ]
+[v OLEDText@k k `uc  1 a 1 36 ]
+[v OLEDText@j j `uc  1 a 1 35 ]
+[v OLEDText@m m `uc  1 a 1 34 ]
+[v OLEDText@l l `uc  1 a 1 33 ]
+"727
+[v OLEDText@x x `i  1 p 2 12 ]
+[v OLEDText@y y `i  1 p 2 14 ]
+[v OLEDText@textptr textptr `*.4uc  1 p 1 16 ]
+[v OLEDText@size size `i  1 p 2 17 ]
+[v OLEDText@color color `uc  1 p 1 19 ]
+"773
+} 0
+"320
+[v _OLEDPixel OLEDPixel `(v  1 e 0 0 ]
+{
+"342
+[v OLEDPixel@temp temp `i  1 a 2 10 ]
+"324
+[v OLEDPixel@axisX axisX `ui  1 a 2 7 ]
+"322
+[v OLEDPixel@ptr ptr `*.39uc  1 a 2 5 ]
+"325
+[v OLEDPixel@axisY axisY `ui  1 a 2 3 ]
+"323
+[v OLEDPixel@page page `uc  1 a 1 9 ]
+"326
+[v OLEDPixel@bitNumber bitNumber `c  1 a 1 2 ]
+"320
+[v OLEDPixel@x x `i  1 p 2 9 ]
+[v OLEDPixel@y y `i  1 p 2 11 ]
+[v OLEDPixel@color color `uc  1 p 1 13 ]
+"366
+} 0
+"15 C:\Program Files (x86)\Microchip\xc8\v1.35\sources\common\Umul16.c
+[v i1___wmul __wmul `(ui  1 e 2 0 ]
+{
+[v i1___wmul@product __wmul `ui  1 a 2 4 ]
+[v i1___wmul@multiplier multiplier `ui  1 p 2 0 ]
+[v i1___wmul@multiplicand multiplicand `ui  1 p 2 2 ]
+"53
+} 0
+"6 C:\Program Files (x86)\Microchip\xc8\v1.35\sources\common\awdiv.c
+[v i1___awdiv __awdiv `(i  1 e 2 0 ]
+{
+[v i1___awdiv@quotient __awdiv `i  1 a 2 7 ]
+[v i1___awdiv@sign __awdiv `uc  1 a 1 6 ]
+[v i1___awdiv@counter __awdiv `uc  1 a 1 5 ]
+[v i1___awdiv@divisor divisor `i  1 p 2 0 ]
+[v i1___awdiv@dividend dividend `i  1 p 2 2 ]
+"42
+} 0
+"294 D:\Documents\repo\KompassDevice\OLED.h
+[v i1_OLEDCommand OLEDCommand `(v  1 e 0 0 ]
+{
+[v i1OLEDCommand@c c `uc  1 a 1 wreg ]
+[v i1OLEDCommand@command OLEDCommand `uc  1 a 1 5 ]
+[v i1OLEDCommand@c c `uc  1 a 1 wreg ]
+"296
+[v i1OLEDCommand@c c `uc  1 a 1 4 ]
+"303
+} 0
+"47 D:\Documents\repo\KompassDevice\i2c.c
+[v i1_i2c_Write i2c_Write `(v  1 e 0 0 ]
+{
+[v i1i2c_Write@data data `uc  1 a 1 wreg ]
+[v i1i2c_Write@data data `uc  1 a 1 wreg ]
+"49
+[v i1i2c_Write@data data `uc  1 a 1 0 ]
+"51
+} 0
+"40
+[v i1_i2c_Stop i2c_Stop `(v  1 e 0 0 ]
+{
+"44
+} 0
+"27
+[v i1_i2c_Start i2c_Start `(v  1 e 0 0 ]
+{
+"31
+} 0
+"55
+[v i1_i2c_Address i2c_Address `(v  1 e 0 0 ]
+{
+[v i1i2c_Address@address address `uc  1 a 1 wreg ]
+[v i1i2c_Address@l_address i2c_Address `uc  1 a 1 3 ]
+[v i1i2c_Address@address address `uc  1 a 1 wreg ]
+[v i1i2c_Address@mode mode `uc  1 p 1 0 ]
+"59
+[v i1i2c_Address@address address `uc  1 a 1 2 ]
+"63
+} 0
+"22
+[v i1_i2c_Wait i2c_Wait `(v  1 e 0 0 ]
+{
+"24
+} 0
+"4 C:\Program Files (x86)\Microchip\xc8\v1.35\sources\common\abs.c
+[v _abs abs `(i  1 e 2 0 ]
+{
+[v abs@a a `i  1 p 2 0 ]
+"9
+} 0
+"72 D:\Documents\repo\KompassDevice\needle.c
+[v _AngleToSlot AngleToSlot `(uc  1 e 1 0 ]
+{
+[v AngleToSlot@Angle Angle `i  1 p 2 30 ]
+"77
+} 0
+"44 C:\Program Files (x86)\Microchip\xc8\v1.35\sources\common\fttol.c
+[v ___fttol __fttol `(l  1 e 4 0 ]
+{
+"47
+[v ___fttol@lval lval `ul  1 a 4 25 ]
+"46
+[v ___fttol@exp1 exp1 `uc  1 a 1 29 ]
+[v ___fttol@sign1 sign1 `uc  1 a 1 24 ]
+"44
+[v ___fttol@f1 f1 `f  1 p 3 16 ]
+"73
+} 0
+"56 C:\Program Files (x86)\Microchip\xc8\v1.35\sources\common\ftdiv.c
+[v ___ftdiv __ftdiv `(f  1 e 3 0 ]
+{
+"60
+[v ___ftdiv@f3 f3 `f  1 a 3 11 ]
+"59
+[v ___ftdiv@sign sign `uc  1 a 1 15 ]
+[v ___ftdiv@exp exp `uc  1 a 1 14 ]
+[v ___ftdiv@cntr cntr `uc  1 a 1 10 ]
+"56
+[v ___ftdiv@f2 f2 `f  1 p 3 0 ]
+[v ___ftdiv@f1 f1 `f  1 p 3 3 ]
+"86
+} 0
+"32 C:\Program Files (x86)\Microchip\xc8\v1.35\sources\common\awtoft.c
+[v ___awtoft __awtoft `(f  1 e 3 0 ]
+{
+"34
+[v ___awtoft@sign sign `uc  1 a 1 13 ]
+"32
+[v ___awtoft@c c `i  1 p 2 8 ]
+"42
+} 0
+"62 C:\Program Files (x86)\Microchip\xc8\v1.35\sources\common\float.c
+[v ___ftpack __ftpack `(f  1 e 3 0 ]
+{
+[v ___ftpack@arg arg `um  1 p 3 0 ]
+[v ___ftpack@exp exp `uc  1 p 1 3 ]
+[v ___ftpack@sign sign `uc  1 p 1 4 ]
+"86
+} 0
+"6 C:\Program Files (x86)\Microchip\xc8\v1.35\sources\common\awmod.c
+[v ___awmod __awmod `(i  1 e 2 0 ]
+{
+"11
+[v ___awmod@sign sign `uc  1 a 1 6 ]
+[v ___awmod@counter counter `uc  1 a 1 5 ]
+"6
+[v ___awmod@divisor divisor `i  1 p 2 0 ]
+[v ___awmod@dividend dividend `i  1 p 2 2 ]
+"35
+} 0

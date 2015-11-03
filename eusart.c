@@ -5,6 +5,8 @@
 #include <stdint.h>
 #include <string.h>
 #include <stdlib.h>
+#include "OLED.h"
+#include "needle.h"
 
 static char console[10][16]; //Pour voir ce qu'il se passe en mode debug
 static char line[16];
@@ -85,15 +87,19 @@ void EUSART_Receive_ISR(void) // appelle automatiquement lorsqu'il y a un charac
            //check format: 8 characters, starting with d 
            if ((idex == 9) && (line[0]=='d')&&(line[5]=='b'))
            {
-               char distArr[5];
+               char distArr[9];
                char bearingArr[4];
                
               //retrieve dist and bearing
                distArr[0] = line[1];
                distArr[1] = line[2];
                distArr[2] = line[3];
-               distArr[3] = line[4];
-               distArr[4] = '\0';
+               distArr[3] = '.';
+               distArr[4] = line[4];
+               distArr[5] = ' ';
+               distArr[6] = 'k';
+               distArr[7] = 'm';
+               distArr[8] = '\0';
    
                 bearingArr[0] = line[6];
                 bearingArr[1] = line[7];
@@ -103,6 +109,10 @@ void EUSART_Receive_ISR(void) // appelle automatiquement lorsqu'il y a un charac
                 char *ptr; //useless pointer to store the next character
                 distance = strtol(distArr, &ptr, 10); 
                 bearing = strtol(bearingArr, &ptr, 10);
+                
+                OLEDText ( 0, 0, &distArr, SIZE_TWO, WHITE );
+                OLEDUpdateDisplay ( DDGRAM_CLEAR );
+                moveNeedle(AngleToSlot(bearing));
            }
             //clean line and reinit index
              idex = 0;

@@ -4,11 +4,13 @@
 #include <stdlib.h>
 #include <string.h>
 
+#include "system_init.h"
 #include "eusart.h"
 #include "interrupt_manager.h"
 #include "LSM303D.h"
-#include "OLED.h"
+//#include "OLED.h"
 #include "needle.h"
+
 
 /*static int offsetX[32]=
 {835,992,1547,1846,2679,3190,3692,3897,3868,3650,3285,3119,2706,2292,2030,1695,1520,1234,763,188,-483,-1063,-1238,-1329,-1202,-874,-666,-511,-144,197,395,689};
@@ -26,13 +28,14 @@ int MagAngle = 0;
 void main(void) {
     // initialize the device
     SYSTEM_Initialize();
+    initNeedle();
     
     OLEDSetUp ( );
+    //OLEDFill ( CLEAR );
+    
  
- 
- 
- 
- char pos=0;
+  
+/* char pos=0;
  char pos2=0;
  
  while (1)
@@ -59,20 +62,20 @@ void main(void) {
      }
      
  
- }
+ }*/
 
     // When using interrupts, you need to set the Global and Peripheral Interrupt Enable bits
     // Use the following macros to:
 
     // Enable the Global Interrupts
-    //INTERRUPT_GlobalInterruptEnable();
+    INTERRUPT_GlobalInterruptEnable();
 
     // Enable the Peripheral Interrupts
-    //INTERRUPT_PeripheralInterruptEnable();
+    INTERRUPT_PeripheralInterruptEnable();
     
-    //RESET_BT_PORT = 1;
-    //__delay_ms(100);
-    //printf("str\r"); // met la puce en mode stream, cf doc sur le site truconnect
+    RC5 = 1; //RESET BT OFF
+    __delay_ms(100);
+    printf("str\r"); // met la puce en mode stream, cf doc sur le site truconnect
     
     //LSM303D_init();
     

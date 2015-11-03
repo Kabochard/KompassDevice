@@ -44,3 +44,7 @@ build/default/production/eusart.pre
 *.d
 *.pre
 *.hxl
+build/default/production/eusart.p1.d
+*.d
+*.lst
+dist/default/debug/KompassDevice.debug.mum
