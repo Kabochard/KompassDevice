@@ -1,6 +1,16 @@
+
 #include "eusart.h"
+#include <xc.h>
+#include <stdbool.h>
+#include <stdint.h>
+#include <string.h>
+#include <stdlib.h>
 
 static char console[10][16]; //Pour voir ce qu'il se passe en mode debug
+static char line[16];
+static int idex;
+static int distance;
+static int bearing;
 
 static unsigned int lines=0;
 static unsigned int charac=0;
@@ -29,6 +39,9 @@ void EUSART_Initialize(void) {
 
     // enable receive interrupt
     PIE1bits.RCIE = 1;
+    
+    //initialise index at 0
+    idex = 0;
 }
 
 /*void EUSART_Read(char *Output) 
@@ -49,29 +62,62 @@ void EUSART_Receive_ISR(void) // appelle automatiquement lorsqu'il y a un charac
 {
     char incoming;
     
+    
+    //check if 
+    
+    
     if (1 == RCSTAbits.OERR) 
     {
+        //clean line and reinit index
+        idex = 0;
+        memset(&line[0], 0, sizeof(line));
+        
         // EUSART error - restart
         RCSTAbits.CREN = 0;
-        RCSTAbits.CREN = 1;
+        RCSTAbits.CREN = 1;  
     }
-    
-    incoming = RCREG;
-    console[lines][charac]=incoming;
-    
-    if ((incoming == '\n')||(incoming == '\r')) //truc foireux pour remplir la console
-    {  
-        if(charac > 0)
-        {
-            lines++;
-            charac =0;
-        }
-    }  
     else
     {
-        charac++;
-    }    
-}
+       incoming = RCREG;
+       
+       if ((incoming == '\n')||(incoming == '\r')) 
+       {
+           //check format: 8 characters, starting with d 
+           if ((idex == 9) && (line[0]=='d')&&(line[5]=='b'))
+           {
+               char distArr[5];
+               char bearingArr[4];
+               
+              //retrieve dist and bearing
+               distArr[0] = line[1];
+               distArr[1] = line[2];
+               distArr[2] = line[3];
+               distArr[3] = line[4];
+               distArr[4] = '\0';
+   
+                bearingArr[0] = line[6];
+                bearingArr[1] = line[7];
+                bearingArr[2] = line[8];
+                bearingArr[3] = '\0';
+
+                char *ptr; //useless pointer to store the next character
+                distance = strtol(distArr, &ptr, 10); 
+                bearing = strtol(bearingArr, &ptr, 10);
+           }
+            //clean line and reinit index
+             idex = 0;
+            memset(&line[0], 0, sizeof(line));
+        }
+       else {
+           line[idex] = incoming;
+           idex = idex + 1;
+       }
+                    
+    }
+       
+ }
+    
+
 
 
 void putch(unsigned char byte)

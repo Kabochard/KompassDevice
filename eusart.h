@@ -1,18 +1,13 @@
-#ifndef _EUSART_H
-#define _EUSART_H
+#ifndef EUSART_H
+#define EUSART_H
 
-
-#include <xc.h>
-#include <stdbool.h>
-#include <stdint.h>
-
-
-
-
+//initialise eusart connection
 void EUSART_Initialize(void);
    
+//handle incoming characters
 void EUSART_Receive_ISR(void);
-    
+
+//send charcters to the uart module
 void putch(unsigned char byte); // est appele lorsque tu fais un printf
 
 #endif
