@@ -4,6 +4,9 @@
  * Copyright (C)2011 HobbyTronics.co.uk 2011
  * Freely distributable.
 */
+#ifndef i2c_H
+#define	i2c_H
+
 #define I2C_WRITE 0
 #define I2C_READ 1
 
@@ -31,3 +34,5 @@ void i2c_Address(unsigned char address, unsigned char mode);
 
 // i2c_Read - Reads a byte from Slave device
 unsigned char i2c_Read(unsigned char ack);
+
+#endif

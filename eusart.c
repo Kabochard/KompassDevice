@@ -11,11 +11,12 @@
 static char console[10][16]; //Pour voir ce qu'il se passe en mode debug
 static char line[16];
 static int idex;
-static int distance;
+static char distance[5];
 static int bearing;
 
 static unsigned int lines=0;
 static unsigned int charac=0;
+
 
 void EUSART_Initialize(void) {
     // disable interrupts before changing states
@@ -42,8 +43,14 @@ void EUSART_Initialize(void) {
     // enable receive interrupt
     PIE1bits.RCIE = 1;
     
-    //initialise index at 0
+    //initialise values at 0
     idex = 0;
+    bearing = 0;
+    distance[0] = '0';
+    distance[1] = '0';
+    distance[2] = '0';
+    distance[3] = '0';
+    distance[4] = '\0';
 }
 
 /*void EUSART_Read(char *Output) 
@@ -87,6 +94,7 @@ void EUSART_Receive_ISR(void) // appelle automatiquement lorsqu'il y a un charac
            //check format: 8 characters, starting with d 
            if ((idex == 9) && (line[0]=='d')&&(line[5]=='b'))
            {
+
                char distArr[9];
                char bearingArr[4];
                
@@ -107,12 +115,14 @@ void EUSART_Receive_ISR(void) // appelle automatiquement lorsqu'il y a un charac
                 bearingArr[3] = '\0';
 
                 char *ptr; //useless pointer to store the next character
-                distance = strtol(distArr, &ptr, 10); 
+                //distance = strtol(distArr, &ptr, 10); 
                 bearing = strtol(bearingArr, &ptr, 10);
                 
+
                 OLEDText ( 0, 0, &distArr, SIZE_TWO, WHITE );
                 OLEDUpdateDisplay ( DDGRAM_CLEAR );
                 moveNeedle(AngleToSlot(bearing));
+
            }
             //clean line and reinit index
              idex = 0;
