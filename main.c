@@ -9,6 +9,7 @@
 #include "interrupt_manager.h"
 #include "LSM303D.h"
 #include "OLED.h"
+#include "needle.h"
 
 /*static int offsetX[32]=
 {835,992,1547,1846,2679,3190,3692,3897,3868,3650,3285,3119,2706,2292,2030,1695,1520,1234,763,188,-483,-1063,-1238,-1329,-1202,-874,-666,-511,-144,197,395,689};
@@ -17,7 +18,7 @@ static int offsetY[32]=
 */
 
 int MagAngle = 0;
-char CurrentSlot = 0;
+
 //int console[2][100];
 
 /*
@@ -52,6 +53,9 @@ void main(void) {
         ODOScroll_units(pos);
         OLEDUpdateDisplay ( DDGRAM_NO_CLEAR );
         }
+        __delay_ms(120);
+        moveNeedle(CurrentSlot);
+        CurrentSlot=(CurrentSlot+1)%32;
        // __delay_ms (20);
      }
      
@@ -67,11 +71,11 @@ void main(void) {
     // Enable the Peripheral Interrupts
     //INTERRUPT_PeripheralInterruptEnable();
     
-    RESET_BT_PORT = 1;
-    __delay_ms(100);
-    printf("str\r"); // met la puce en mode stream, cf doc sur le site truconnect
+    //RESET_BT_PORT = 1;
+    //__delay_ms(100);
+    //printf("str\r"); // met la puce en mode stream, cf doc sur le site truconnect
     
-    LSM303D_init();
+    //LSM303D_init();
     
 
     // Disable the Global Interrupts
@@ -84,6 +88,9 @@ void main(void) {
     
     while (1)
     {
+        
+        
+        
         /*for(char j=0;j<100;j++)
         {
          //LSM303D_Write(ADDR_CTRL_REG7,0x01);
@@ -97,9 +104,9 @@ void main(void) {
         //MoveOneStepToSlot(AngleToSlot(MagAngle));
         //i++;
         //moveNeedle(i);
-        __delay_ms(1000);
-        UpdateMagneticAngle();
-        printf("angle: %d deg\r\n",(int)MagAngle);
+        //__delay_ms(1000);
+        //UpdateMagneticAngle();
+        //printf("angle: %d deg\r\n",(int)MagAngle);
        //printf("angle: %d \r\n",MagAngle);
     }
     /*{
@@ -132,73 +139,7 @@ void main(void) {
 }
 
 
-void moveNeedle(int n)
-{
-    if(n>16)
-        n = n+2;
-    swithcAllInductanceOff();
-    SwitchOnInductandce(n/2);
-    
-    if (n/2 != (n+1)/2)
-    {
-    SwitchOnInductandce((n+1)/2);
-    }
-}
 
-void SwitchOnInductandce(int i)
-{
-    switch (i)
-    {
-        case 0: RA1 = 1;
-        break;
-        case 1: RA3 = 1;
-        break;
-        case 2: RA5 = 1;
-        break;
-        case 3: RE1 = 1;
-        break;
-        case 4: RA7 = 1;
-        break;
-        case 5: RC0 = 1;
-        break;
-        case 6: RC2 = 1;
-        break;
-        case 7: RD1 = 1;
-        break;
-        case 8: RD3 = 1;
-        break;
-        //////
-        case 9: RA0 = 1;
-        break;
-        case 10: RA2 = 1;
-        break;
-        case 11: RA4 = 1;
-        break;
-        case 12: RE0 = 1;
-        break;
-        case 13: RE2 = 1;
-        break;
-        case 14: RA6 = 1;
-        break;
-        case 15: RC1 = 1;
-        break;
-        case 16: RD0 = 1;
-        break;
-        case 17: RD2 = 1;
-        break;
-        
-        
-            
-    }
-}
-
-void swithcAllInductanceOff(void)
-{
-    PORTA = PORTA&0x00;
-    PORTC = PORTC&0xF8;
-    PORTD = PORTD&0xF0;
-    PORTE = PORTE&0xF8;
-}
 
 /*void UpdateMagneticAngle(void)
 {
@@ -228,41 +169,6 @@ void UpdateMagneticAngle(void)
     Acc=((angrad+3.14)*57.32)+Acc;
     MagAngle = (int)(Acc/5);
     __delay_ms(5);
-    }
-
-}
-
-
-char AngleToSlot(int Angle)
-{
-    Angle = Angle%360;
-    return (Angle/11.58);
-
-}
-
-void MoveOneStepToSlot(char target)
-{
-    //Test pour stabiliser l aiguille
-    if(   ((target>CurrentSlot)&&((target-CurrentSlot)<2))  ||((CurrentSlot>target)&&((CurrentSlot-target)<2)))
-        return;
-    
-    
-    if(((target>CurrentSlot)&&(target-CurrentSlot<17))
-        ||((target<CurrentSlot)&&(CurrentSlot-target>16)))
-    {
-        CurrentSlot++;
-        if(CurrentSlot>31)
-            CurrentSlot=0;
-        moveNeedle(CurrentSlot);
-    }
-    if(((target>CurrentSlot)&&(target-CurrentSlot>16))
-            ||((target<CurrentSlot)&&(CurrentSlot-target<17)))
-    {
-        if(CurrentSlot==0)
-            CurrentSlot=31;
-        else
-            CurrentSlot--;
-        moveNeedle(CurrentSlot);
     }
 
 }
