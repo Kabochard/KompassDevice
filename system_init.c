@@ -19,17 +19,24 @@
 #pragma config PLLEN = ON    // PLL Enable->4x PLL enabled
 #pragma config BORV = LO    // Brown-out Reset Voltage Selection->Brown-out Reset Voltage (Vbor), low trip point selected.
 
-#include "system_init.h"
 #include <xc.h>
+#include "system_init.h"
 #include "eusart.h"
 #include "i2c.h"
+#include "OLED.h"
+#include "needle.h"
 
 void SYSTEM_Initialize(void) 
 {
     OSCILLATOR_Initialize();
     PIN_MANAGER_Initialize();
+    
     EUSART_Initialize();
     i2c_Init();
+    
+      // initialize user interface
+    initNeedle(); 
+    OLEDSetUp ( );
 }
 
 void OSCILLATOR_Initialize(void) {

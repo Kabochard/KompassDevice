@@ -9,16 +9,8 @@
 #include <string.h>
 
 
+
 #define _XTAL_FREQ 16000000
-#define OLED_RESET_PIN PORTDbits . RD2
-
-#define bit_test(D,i) (D & (0x01 << i))
-
-#define ARRAY_WIDHT 96 //
-#define ARRAY_HEIGHT 2 //fonctionne plus ou moins ac 8
-#define ARRAY_LENGHT ( 8 * ARRAY_HEIGHT )
-#define SSD1306_GDDRAM ( ARRAY_WIDHT * ARRAY_HEIGHT / 8 )
-
 
 
 

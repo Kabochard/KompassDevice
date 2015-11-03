@@ -11,12 +11,12 @@
 static char console[10][16]; //Pour voir ce qu'il se passe en mode debug
 static char line[16];
 static int idex;
-static char distance[5];
 static int bearing;
 
 static unsigned int lines=0;
 static unsigned int charac=0;
 
+#define BLEENABLE RC5
 
 void EUSART_Initialize(void) {
     // disable interrupts before changing states
@@ -43,14 +43,20 @@ void EUSART_Initialize(void) {
     // enable receive interrupt
     PIE1bits.RCIE = 1;
     
+    //enable BLE
+     BLEENABLE = 1; //RESET BT OFF
+    __delay_ms(100);
+    
+    printf("str\r");
+    
     //initialise values at 0
     idex = 0;
     bearing = 0;
-    distance[0] = '0';
-    distance[1] = '0';
-    distance[2] = '0';
-    distance[3] = '0';
-    distance[4] = '\0';
+} 
+
+void EUSART_RestartBLE(void)
+{
+    printf("adv\r"); 
 }
 
 /*void EUSART_Read(char *Output) 

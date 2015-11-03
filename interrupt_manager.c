@@ -1,6 +1,6 @@
 #include "interrupt_manager.h"
-#include <XC.h>
-
+#include <xc.h>
+#include "eusart.h"
 
 void interrupt INTERRUPT_InterruptManager(void) {
     // interrupt handler
