@@ -50,3 +50,4 @@ build/default/production/eusart.p1.d
 dist/default/debug/KompassDevice.debug.mum
 
 *.p1
+*.rlf

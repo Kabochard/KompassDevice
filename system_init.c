@@ -28,6 +28,7 @@
 
 void SYSTEM_Initialize(void) 
 {
+    
     OSCILLATOR_Initialize();
     PIN_MANAGER_Initialize();
     
@@ -36,7 +37,14 @@ void SYSTEM_Initialize(void)
     
       // initialize user interface
     initNeedle(); 
+    LSM303D_init();
+    
     OLEDSetUp ( );
+    
+    OLEDFill ( CLEAR );
+    char Hello [] = "Waiting for      coordinates";
+    OLEDText ( 0, 0, Hello, SIZE_ONE, WHITE );
+    OLEDUpdateDisplay ( DDGRAM_CLEAR );
 }
 
 void OSCILLATOR_Initialize(void) {

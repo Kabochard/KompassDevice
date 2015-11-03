@@ -1,12 +1,11 @@
 #include "needle.h"
 #include <xc.h>
 
-static char CurrentSlot;
 
 void initNeedle(void)
 {
     CurrentSlot = 0;
-    moveNeedle(0);
+    //moveNeedle(0);
     
 }
 
@@ -67,6 +66,7 @@ void moveNeedle(int n)
     {
     SwitchOnInductandce(((n+1)/2)%16);
     }
+    CurrentSlot = n;
 }
 
 char AngleToSlot(int Angle)
@@ -76,31 +76,31 @@ char AngleToSlot(int Angle)
 
 }
 
-void MoveOneStepToSlot(char target)
-{
-    //Test pour stabiliser l aiguille
-    if(   ((target>CurrentSlot)&&((target-CurrentSlot)<2))  ||((CurrentSlot>target)&&((CurrentSlot-target)<2)))
-        return;
-    
-    
-    if(((target>CurrentSlot)&&(target-CurrentSlot<17))
-        ||((target<CurrentSlot)&&(CurrentSlot-target>16)))
-    {
-        CurrentSlot++;
-        if(CurrentSlot>31)
-            CurrentSlot=0;
-        moveNeedle(CurrentSlot);
-    }
-    if(((target>CurrentSlot)&&(target-CurrentSlot>16))
-            ||((target<CurrentSlot)&&(CurrentSlot-target<17)))
-    {
-        if(CurrentSlot==0)
-            CurrentSlot=31;
-        else
-            CurrentSlot--;
-        moveNeedle(CurrentSlot);
-    }
-
-}
+//void MoveOneStepToSlot(char target)
+//{
+//    //Test pour stabiliser l aiguille
+//    if(   ((target>CurrentSlot)&&((target-CurrentSlot)<2))  ||((CurrentSlot>target)&&((CurrentSlot-target)<2)))
+//        return;
+//    
+//    
+//    if(((target>CurrentSlot)&&(target-CurrentSlot<17))
+//        ||((target<CurrentSlot)&&(CurrentSlot-target>16)))
+//    {
+//        CurrentSlot++;
+//        if(CurrentSlot>31)
+//            CurrentSlot=0;
+//        moveNeedle(CurrentSlot);
+//    }
+//    if(((target>CurrentSlot)&&(target-CurrentSlot>16))
+//            ||((target<CurrentSlot)&&(CurrentSlot-target<17)))
+//    {
+//        if(CurrentSlot==0)
+//            CurrentSlot=31;
+//        else
+//            CurrentSlot--;
+//        moveNeedle(CurrentSlot);
+//    }
+//
+//}
 
 
