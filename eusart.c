@@ -105,10 +105,18 @@ void EUSART_Receive_ISR(void) // appelle automatiquement lorsqu'il y a un charac
                char bearingArr[4];
                
               //retrieve dist and bearing
-               distArr[0] = line[1];
-               distArr[1] = line[2];
-               distArr[2] = line[3];
-               distArr[3] = '.';
+               if(line[1]=='0')
+               {distArr[0] = ' ';}
+               else
+               {distArr[0] = line[1]; }
+               
+               if(line[2]=='0')
+               {distArr[1] = ' ';}
+               else
+               {distArr[1] = line[2]; }
+               //distArr[1] = line[2];
+               distArr[2] = '.';
+               distArr[3] = line[3];
                distArr[4] = line[4];
                distArr[5] = ' ';
                distArr[6] = 'k';

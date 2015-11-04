@@ -47,19 +47,22 @@ void main(void) {
     {
         
         
-    //MagAng = Update_Magnetic_Angle();
-  
-    
-    //char disp[4];
-    
-    //char str[10];
-
-    //sprintf(disp, "%d", MagAng);
-    ///OLEDText ( 0, 0, disp, SIZE_ONE, WHITE );
-    //OLEDUpdateDisplay ( DDGRAM_CLEAR );
-    
-    //MoveOneStepToSlot(AngleToSlot(MagAng)); 
-    __delay_ms(100);
+//    MagAng = Update_Magnetic_Angle();
+//  
+//    
+//    char disp[4];
+//    
+//    char str[10];
+//
+//    sprintf(disp, "%d", MagAng);
+//    OLEDText ( 0, 0, disp, SIZE_ONE, WHITE );
+//    OLEDUpdateDisplay ( DDGRAM_CLEAR );
+//    
+//    //MoveOneStepToSlot(AngleToSlot(MagAng)); 
+     //   moveNeedle(pos);
+     //   pos = (pos +1) % 32;
+        
+    //__delay_ms(300);
   
         
     }
