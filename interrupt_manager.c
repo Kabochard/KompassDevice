@@ -20,20 +20,20 @@ void interrupt INTERRUPT_InterruptManager(void) {
         {
             IOCBFbits.IOCBF2=0;
             moveNeedle_fw();
-            __delay_ms(100);
+           // __delay_ms(100);
             
-            while(status == 0)
-                status = PORTBbits.RB2;
-           __delay_ms(100);
+//            while(status == 0)
+//                status = PORTBbits.RB2;
+           //__delay_ms(100);
         }
         else if(IOCBFbits.IOCBF3 ==1)
         {
             IOCBFbits.IOCBF3=0;
             moveNeedle_bk();
-            __delay_ms(100);
-           while(status == 0)
-                status = PORTBbits.RB3;
-            __delay_ms(100);
+//            __delay_ms(100);
+//           while(status == 0)
+//                status = PORTBbits.RB3;
+//            __delay_ms(100);
         }
         else
         {
