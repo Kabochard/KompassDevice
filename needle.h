@@ -8,7 +8,7 @@
 #ifndef NEEDLE_H
 #define	NEEDLE_H
 
-char CurrentSlot = 0;
+char CurrentSlot;
 
 void initNeedle(void);
 void swithcAllInductanceOff(void);
@@ -16,7 +16,9 @@ void SwitchOnInductandce(int i);
 void moveNeedle(int n);
 char AngleToSlot(int Angle);
 //void MoveOneStepToSlot(char target);
-
+void moveNeedle_fw(void);
+void moveNeedle_bk(void);
+char GetCurrentSlot(void);
 
 
 #endif	/* NEEDLE_H */

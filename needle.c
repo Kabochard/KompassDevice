@@ -76,6 +76,20 @@ char AngleToSlot(int Angle)
 
 }
 
+void moveNeedle_fw(void)
+{
+    moveNeedle( (CurrentSlot+1)%32);
+}
+
+void moveNeedle_bk(void)
+{
+    moveNeedle( (CurrentSlot-1)%32);
+}
+
+char GetCurrentSlot(void)
+{
+    return CurrentSlot;
+}
 //void MoveOneStepToSlot(char target)
 //{
 //    //Test pour stabiliser l aiguille
