@@ -45,6 +45,10 @@ void SYSTEM_Initialize(void)
     char Hello [] = "Waiting for      coordinates";
     OLEDText ( 0, 0, Hello, SIZE_ONE, WHITE );
     OLEDUpdateDisplay ( DDGRAM_CLEAR );
+    
+    INTCONbits.IOCIE = 1;
+    IOCBNbits.IOCBN2 = 1;
+    IOCBNbits.IOCBN3 = 1;
 }
 
 void OSCILLATOR_Initialize(void) {
@@ -60,14 +64,17 @@ void OSCILLATOR_Initialize(void) {
 
 void PIN_MANAGER_Initialize(void) {
     
+    OPTION_REGbits.nWPUEN = 0x00;
+    
     LATA = 0x00;
     TRISA = 0x00;
     ANSELA = 0x00;
 
     LATB = 0x00;
     TRISB = 0xFF;
-    ANSELB = 0x3F;
-    WPUB = 0x00;
+    ANSELB = 0x00;
+    WPUBbits.WPUB2 = 1;
+    WPUBbits.WPUB3 = 1;
 
     LATC = 0x00;
     TRISC = 0xD8;
@@ -81,7 +88,7 @@ void PIN_MANAGER_Initialize(void) {
     ANSELE = 0x00;
     WPUE = 0x00;
 
-    OPTION_REGbits.nWPUEN = 0x01;
+    
 
     APFCON = 0x00;
 

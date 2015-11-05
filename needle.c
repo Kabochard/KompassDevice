@@ -5,7 +5,7 @@
 void initNeedle(void)
 {
     CurrentSlot = 0;
-    //moveNeedle(0);
+    moveNeedle(0);
     
 }
 
@@ -74,6 +74,21 @@ char AngleToSlot(int Angle)
     Angle = Angle%360;
     return (Angle/11.58);
 
+}
+
+void moveNeedle_fw(void)
+{
+    moveNeedle( (CurrentSlot+1)%32);
+}
+
+void moveNeedle_bk(void)
+{
+    moveNeedle( (CurrentSlot-1)%32);
+}
+
+char GetCurrentSlot(void)
+{
+    return CurrentSlot;
 }
 
 //void MoveOneStepToSlot(char target)
