@@ -11,8 +11,19 @@
 #include "OLED.h"
 
 
+
 #define _XTAL_FREQ 16000000
 
+const int CoefX []= {-2498 ,-1182 ,-412 ,680 ,1875 ,3392 ,5449 ,8870 ,11376 ,13113 ,12166 ,9661 ,6895 ,4809 ,3382 ,1299 ,-298 ,-1763 ,-2279 ,-3520 ,-4647 ,-6236 ,-8340 ,-11413 ,-13763 ,-15677 ,-15136 ,-13327 ,-10405 ,-8142 ,-6480 ,-4384 };
+const int CoefY []= {-3607 ,-3542 ,-3779 ,-3977 ,-4453 ,-4806 ,-5159 ,-4724 ,-3113 ,-39 ,2544 ,3942 ,4173 ,3895 ,3739 ,3406 ,3410 ,3475 ,3787 ,4086 ,4579 ,4955 ,5237 ,4768 ,3254 ,372 ,-2324 ,-3977 ,-4526 ,-4366 ,-4173 ,-3758};
+
+static int norm = 0;
+static int MagAng = 0;
+static int TruAng = 0;
+static int TruNorm = 0;
+
+static int TruX = 0;
+static int TruY = 0;
 /*static int offsetX[32]=
 {835,992,1547,1846,2679,3190,3692,3897,3868,3650,3285,3119,2706,2292,2030,1695,1520,1234,763,188,-483,-1063,-1238,-1329,-1202,-874,-666,-511,-144,197,395,689};
 static int offsetY[32]=
@@ -30,30 +41,61 @@ static int offsetY[32]=
 //      return str3;
 //    }
 
+void ComputeAng()
+{
+    LSM303D_Update_M_Data();
+    double x = (double) (GetMx());
+    double y = (double) (GetMy());
+    
+    norm = (int) (sqrt(x * x + y * y));
+    MagAng = (int) ((atan2(x,y)+3.14)*57.32);
+    
+    int cSlot = GetCurrentSlot();
+    TruX =GetMx() - CoefX[cSlot] -75;
+    TruY = GetMy() - CoefY[cSlot] - 1066;
+    
+    // TruNorm = (int) (sqrt(TruX * TruX + TruY * TruY));
+    //TruAng = (int) ((atan2(TruX,TruY)+3.14)*57.32);
+    
+    printf("SXY:%2d:%6d:%6d T",cSlot,TruX,TruY);
+}
+
+
  void UpdateDisplay()
     {
+    
+     
+     
         //retrieve distance and bearing from uart (ios)        
-       char dist[4];
+       char dist[6];
        int distance;
        distance = GET_DIST();
-       sprintf(dist, "%d", distance);
+       sprintf(dist, "%5d", TruNorm);
        
-       char bear[3];
+       char bear[4];
        int cap;
        cap = GET_CAP();
-        sprintf(bear, "%d", cap);
-       
-     
-      char* separator;
-      separator = "ang:";
-//      
-      char txt[12];// + strlen(separator)];
-      strcpy(txt, dist);
-      strcat(txt, separator);
-      strcat(txt, bear);
-      //char * txt = ConcatStrings(&dist,&bear,7);
+        sprintf(bear, "%3d", TruAng);
       
-     // OLEDClearBuffer();
+        char slot[3];
+        int slt;
+        slt = GetCurrentSlot();
+        sprintf(slot, "%2d", slt);
+        
+      char separator[] = " Ang:";
+//    
+      char slotor[]  = " Slot:";
+      
+      char Magor[]  = " Mag:";
+      
+      char txt[26];// + strlen(separator)];
+      strcpy(txt, dist);
+      
+      strcat(&txt, &separator);
+      strcat(txt, bear);
+      strcat(&txt, &slotor);
+      strcat(&txt, &slot);
+      
       OLEDText ( 0, 0, &txt, SIZE_ONE, WHITE );
                 OLEDUpdateDisplay ( DDGRAM_CLEAR );
                // moveNeedle(AngleToSlot(bearing));
@@ -74,14 +116,20 @@ void main(void) {
     INTERRUPT_PeripheralInterruptEnable();
     
     //wait for interupt
-    int MagAng;
-   
-    int pos = 0;
+
+    swithcAllInductanceOff();
+    moveNeedle(5);
     
-   // moveNeedle(CurrentSlot);
-    
+    __delay_ms(1000);
     while (1)
     {
+        //printf("Yo");
+                //printf("HelloT \n");
+                __delay_ms(50);
+                ComputeAng();
+                UpdateDisplay();
+
+        }
         
         
 //    MagAng = Update_Magnetic_Angle();
@@ -98,12 +146,15 @@ void main(void) {
 //    //MoveOneStepToSlot(AngleToSlot(MagAng)); 
      //   moveNeedle(pos);
      //   pos = (pos +1) % 32;
-    
-        UpdateDisplay();
-      __delay_ms(300);
+//        ComputeAng();
+//        
+//        printf("XY:%d:%d",GetMx(),GetMy());
+//        UpdateDisplay();
+//        //printf("Hello");
+//      __delay_ms(100);
    
         
-    }
+   
 }
 
      

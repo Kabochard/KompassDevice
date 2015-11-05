@@ -66,7 +66,8 @@ void moveNeedle(int n)
     {
     SwitchOnInductandce(((n+1)/2)%16);
     }
-    //CurrentSlot = n;
+    
+    CurrentSlot = n;
 }
 
 char AngleToSlot(int Angle)

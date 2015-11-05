@@ -14,5 +14,7 @@ void LSM303D_Read_M(void);
 void LSM303D_Read_A(void);
 void LSM303D_Update_M_Data(void);
 int Update_Magnetic_Angle(void);
+int GetMx(void);
+int GetMy(void);
 
 

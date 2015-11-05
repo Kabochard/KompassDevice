@@ -138,8 +138,6 @@
 
 #define LSM303D_ONE_G					9.80665f
 
-const int CoefX []= {285,1686,2115,3253,4287,5654,7486,10210,12546,14634,14529,13085,10036,7789,6097,4358,2330,850,209,-1059,-2333,-4085,-6775,-10390,-12667,-13340,-11504,-8725,-6010,-4386,-3051,-905};
-const int CoefY []= {-2054,-2072,-2331,-2557,-2989,-3286,-3585,-3337,-2170,233,2941,4657,5413,5278,5116,4800,4674,4656,4952,5224,5783,6189,6446,5481,3132,-243,-2198,-2970,-2904,-2573,-2408,-2037};
 
 
 
@@ -160,6 +158,7 @@ void LSM303D_init(void)
     LSM303D_Write(ADDR_CTRL_REG5,REG5_RATE_50HZ_M|REG5_RES_HIGH_M);
     //CTRL6 default 4 gauss
     LSM303D_Write(ADDR_CTRL_REG7,REG7_ONE_SHOT_M);
+    //LSM303D_Write(ADDR_CTRL_REG6,REG6_FULL_SCALE_8GA_M);
 }
 
 
@@ -168,7 +167,7 @@ void LSM303D_Update_M_Data( void)
     LSM303D_Write(ADDR_CTRL_REG7,REG7_ONE_SHOT_M);
     LSM303D_Read_M();
     
-    printf("SLOTXY=%d:%d:%d\n",CurrentSlot,mX,mY);
+   // printf("SLOTXY=%d:%d:%d\n",CurrentSlot,mX,mY);
     
 }
 
@@ -302,11 +301,21 @@ int Update_Magnetic_Angle(void)
     int Acc = 0;
     int X,Y;
     
-    LSM303D_Update_M_Data();
-    X = mX-100;//-CoefX[CurrentSlot];
+    
+    X = mX;//-CoefX[CurrentSlot];
     Y = mY;//-CoefY[CurrentSlot];
     angrad = atan2(X,Y);
     angrad = ((angrad+3.14)*57.32);
     return ((int)angrad);
     //return 1;
+}
+
+int GetMx(void)
+{
+    return mX -160;
+}
+
+int GetMy(void)
+{
+    return mY -160;
 }

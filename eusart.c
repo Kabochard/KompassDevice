@@ -53,9 +53,13 @@ void EUSART_Initialize(void) {
     
     //enable BLE
      BLEENABLE = 1; //RESET BT OFF
-    __delay_ms(100);
+    __delay_ms(300);
     
+   // printf("reboot\r");
+    __delay_ms(300);
     printf("str\r");
+    
+    
     
  
 } 
