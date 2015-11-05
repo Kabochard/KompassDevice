@@ -15,7 +15,8 @@ void putch(unsigned char byte); // est appele lorsque tu fais un printf
 //restart BLE module
 void EUSART_RestartBLE(void);
 
-
+int GET_DIST();
+int GET_CAP();
 #endif
 /**
  End of File
