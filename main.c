@@ -20,7 +20,44 @@ static int offsetY[32]=
 */
 
 
-//int console[2][100];
+////int console[2][100];
+//char* ConcatStrings( char* str1, char* str2, int len)
+//    {
+//        char * str3  //= (char *) malloc(len);
+//      strcpy(str3, str1);
+//      strcat(str3, str2);
+//      
+//      return str3;
+//    }
+
+ void UpdateDisplay()
+    {
+        //retrieve distance and bearing from uart (ios)        
+       char dist[4];
+       int distance;
+       distance = GET_DIST();
+       sprintf(dist, "%d", distance);
+       
+       char bear[3];
+       int cap;
+       cap = GET_CAP();
+        sprintf(bear, "%d", cap);
+       
+     
+      char* separator;
+      separator = "ang:";
+//      
+      char txt[12];// + strlen(separator)];
+      strcpy(txt, dist);
+      strcat(txt, separator);
+      strcat(txt, bear);
+      //char * txt = ConcatStrings(&dist,&bear,7);
+      
+     // OLEDClearBuffer();
+      OLEDText ( 0, 0, &txt, SIZE_ONE, WHITE );
+                OLEDUpdateDisplay ( DDGRAM_CLEAR );
+               // moveNeedle(AngleToSlot(bearing));
+    }
 
 /*
                          Main application
@@ -47,21 +84,30 @@ void main(void) {
     {
         
         
-    //MagAng = Update_Magnetic_Angle();
-  
+//    MagAng = Update_Magnetic_Angle();
+//  
+//    
+//    char disp[4];
+//    
+//    char str[10];
+//
+//    sprintf(disp, "%d", MagAng);
+//    OLEDText ( 0, 0, disp, SIZE_ONE, WHITE );
+//    OLEDUpdateDisplay ( DDGRAM_CLEAR );
+//    
+//    //MoveOneStepToSlot(AngleToSlot(MagAng)); 
+     //   moveNeedle(pos);
+     //   pos = (pos +1) % 32;
     
-    //char disp[4];
-    
-    //char str[10];
-
-    //sprintf(disp, "%d", MagAng);
-    ///OLEDText ( 0, 0, disp, SIZE_ONE, WHITE );
-    //OLEDUpdateDisplay ( DDGRAM_CLEAR );
-    
-    //MoveOneStepToSlot(AngleToSlot(MagAng)); 
-    __delay_ms(100);
-  
+        UpdateDisplay();
+      __delay_ms(300);
+   
         
     }
-     
 }
+
+     
+    
+   
+    
+    

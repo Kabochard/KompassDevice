@@ -12,6 +12,7 @@ static char console[10][16]; //Pour voir ce qu'il se passe en mode debug
 static char line[16];
 static int idex;
 static int bearing;
+static int distance;
 
 static unsigned int lines=0;
 static unsigned int charac=0;
@@ -19,6 +20,13 @@ static unsigned int charac=0;
 #define BLEENABLE RC5
 
 void EUSART_Initialize(void) {
+    
+       //initialise values at 0
+    idex = 0;
+    bearing = 10;
+    distance = 0;
+    
+    
     // disable interrupts before changing states
     PIE1bits.RCIE = 0;
     PIE1bits.TXIE = 0;
@@ -49,9 +57,7 @@ void EUSART_Initialize(void) {
     
     printf("str\r");
     
-    //initialise values at 0
-    idex = 0;
-    bearing = 0;
+ 
 } 
 
 void EUSART_RestartBLE(void)
@@ -101,19 +107,35 @@ void EUSART_Receive_ISR(void) // appelle automatiquement lorsqu'il y a un charac
            if ((idex == 9) && (line[0]=='d')&&(line[5]=='b'))
            {
 
-               char distArr[9];
-               char bearingArr[4];
                
-              //retrieve dist and bearing
+               char bearingArr[4];
+               char distArr[5];
+               
                distArr[0] = line[1];
                distArr[1] = line[2];
                distArr[2] = line[3];
-               distArr[3] = '.';
-               distArr[4] = line[4];
-               distArr[5] = ' ';
-               distArr[6] = 'k';
-               distArr[7] = 'm';
-               distArr[8] = '\0';
+               distArr[3] = line[4];
+               distArr[4] = '\0';
+              //retrieve dist and bearing
+               
+//               char distArr[9];
+//               if(line[1]=='0')
+//               {distArr[0] = ' ';}
+//               else
+//               {distArr[0] = line[1]; }
+//               
+//               if(line[2]=='0')
+//               {distArr[1] = ' ';}
+//               else
+//               {distArr[1] = line[2]; }
+//               //distArr[1] = line[2];
+//               distArr[2] = '.';
+//               distArr[3] = line[3];
+//               distArr[4] = line[4];
+//               distArr[5] = ' ';
+//               distArr[6] = 'k';
+//               distArr[7] = 'm';
+//               distArr[8] = '\0';
    
                 bearingArr[0] = line[6];
                 bearingArr[1] = line[7];
@@ -121,13 +143,11 @@ void EUSART_Receive_ISR(void) // appelle automatiquement lorsqu'il y a un charac
                 bearingArr[3] = '\0';
 
                 char *ptr; //useless pointer to store the next character
-                //distance = strtol(distArr, &ptr, 10); 
+                distance = strtol(distArr, &ptr, 10); 
                 bearing = strtol(bearingArr, &ptr, 10);
                 
 
-                OLEDText ( 0, 0, &distArr, SIZE_TWO, WHITE );
-                OLEDUpdateDisplay ( DDGRAM_CLEAR );
-                moveNeedle(AngleToSlot(bearing));
+                
 
            }
             //clean line and reinit index
@@ -151,4 +171,15 @@ void putch(unsigned char byte)
     while(!TXSTAbits.TRMT); //Waiting for Previous Data to Transmit completly
     TXREG = byte; //Writing data to Transmit Register, Starts transmission
 
+}
+
+
+int GET_DIST()
+{
+    return distance;
+}
+
+int GET_CAP()
+{
+    return bearing;
 }
