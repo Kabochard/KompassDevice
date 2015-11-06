@@ -312,10 +312,10 @@ int Update_Magnetic_Angle(void)
 
 int GetMx(void)
 {
-    return mX -160;
+    return mX;
 }
 
 int GetMy(void)
 {
-    return mY -160;
+    return mY;
 }

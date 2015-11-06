@@ -24,11 +24,11 @@ static int TruNorm = 0;
 
 static int TruX = 0;
 static int TruY = 0;
-/*static int offsetX[32]=
-{835,992,1547,1846,2679,3190,3692,3897,3868,3650,3285,3119,2706,2292,2030,1695,1520,1234,763,188,-483,-1063,-1238,-1329,-1202,-874,-666,-511,-144,197,395,689};
+static int offsetX[32]=
+{1125,-423,-1054,-2587,-3877,-6047,-7184,-8927,-9354,-9934,-9398,-8965,-7571,-6645,-5556,-3183,-1800,-2,535,2065,4021,5283,6699,8069,8880,9553,9194,8637,7020,6672,5195,2554};
 static int offsetY[32]=
-{1181,1432,2197,2511,3034,3079,2692,2283,1352,671,-60,-366,-1021,-1687,-2096,-2722,-2998,-3363,-3901,-4362,-4490,-4230,-3844,-3136,-2549,-1727,-1353,-1060,-457,105,401,973};
-*/
+{1880,1887,2052,2022,1937,1873,1789,1203,402,-641,-1663,-2063,-2448,-2454,-2574,-2444,-2454,-2412,-2600,-2746,-2661,-2379,-2314,-1773,-913,210,1035,1663,2064,1954,1946,1748};
+static float gainY[32]={1.578 , 1.791 , 1.401 , 1.638 , 1.511 , 1.707 , 1.474 , 1.536 , 1.193 , 1.170 , 1.464 , 1.553 , 1.733 , 1.633 , 1.711 , 1.723 , 1.745 , 1.781 , 1.572 , 1.721 , 1.851 , 1.685 , 1.742 , 1.621 , 1.036 , 1.685 , 1.178 , 1.623 , 1.593 , 1.486 , 1.798 , 1.918};
 
 
 ////int console[2][100];
@@ -44,61 +44,70 @@ static int offsetY[32]=
 void ComputeAng()
 {
     LSM303D_Update_M_Data();
-    double x = (double) (GetMx());
-    double y = (double) (GetMy());
+    //double x = (double) (GetMx());
+    //double y = (double) (GetMy());
     
-    norm = (int) (sqrt(x * x + y * y));
-    MagAng = (int) ((atan2(x,y)+3.14)*57.32);
+   // norm = (int) (sqrt(x * x + y * y));
+   // MagAng = (int) ((atan2(x,y)+3.14)*57.32);
     
-    int cSlot = GetCurrentSlot();
-    TruX =GetMx() - CoefX[cSlot] -75;
-    TruY = GetMy() - CoefY[cSlot] - 1066;
+   int cSlot = GetCurrentSlot();
+//    TruX =GetMx() - CoefX[cSlot] -75;
+//    TruY = GetMy() - CoefY[cSlot] - 1066;
+
     
     // TruNorm = (int) (sqrt(TruX * TruX + TruY * TruY));
     //TruAng = (int) ((atan2(TruX,TruY)+3.14)*57.32);
     
-    printf("SXY:%2d:%6d:%6d T",cSlot,TruX,TruY);
+    printf("SXY:%2d:%6d:%6d T",cSlot,GetMx(),GetMy());
 }
 
 
  void UpdateDisplay()
     {
-    
      
-     
-        //retrieve distance and bearing from uart (ios)        
-       char dist[6];
-       int distance;
-       distance = GET_DIST();
-       sprintf(dist, "%5d", TruNorm);
-       
-       char bear[4];
-       int cap;
-       cap = GET_CAP();
-        sprintf(bear, "%3d", TruAng);
-      
-        char slot[3];
+     char slot[3];
         int slt;
         slt = GetCurrentSlot();
         sprintf(slot, "%2d", slt);
-        
-      char separator[] = " Ang:";
-//    
-      char slotor[]  = " Slot:";
-      
-      char Magor[]  = " Mag:";
-      
-      char txt[26];// + strlen(separator)];
-      strcpy(txt, dist);
-      
-      strcat(&txt, &separator);
-      strcat(txt, bear);
-      strcat(&txt, &slotor);
-      strcat(&txt, &slot);
-      
-      OLEDText ( 0, 0, &txt, SIZE_ONE, WHITE );
+    
+        OLEDText ( 0, 0, &slot, SIZE_ONE, WHITE );
                 OLEDUpdateDisplay ( DDGRAM_CLEAR );
-               // moveNeedle(AngleToSlot(bearing));
+     
+     
+//    Commented for speeding up calib 
+//        //retrieve distance and bearing from uart (ios)        
+//       char dist[6];
+//       int distance;
+//       distance = GET_DIST();
+//       sprintf(dist, "%5d", TruNorm);
+//       
+//       char bear[4];
+//       int cap;
+//       cap = GET_CAP();
+//        sprintf(bear, "%3d", TruAng);
+//      
+//        char slot[3];
+//        int slt;
+//        slt = GetCurrentSlot();
+//        sprintf(slot, "%2d", slt);
+//        
+//      char separator[] = " Ang:";
+////    
+//      char slotor[]  = " Slot:";
+//      
+//      char Magor[]  = " Mag:";
+//      
+//      char txt[26];// + strlen(separator)];
+//      strcpy(txt, dist);
+//      
+//      strcat(&txt, &separator);
+//      strcat(txt, bear);
+//      strcat(&txt, &slotor);
+//      strcat(&txt, &slot);
+//      
+//      OLEDText ( 0, 0, &txt, SIZE_ONE, WHITE );
+//                OLEDUpdateDisplay ( DDGRAM_CLEAR );
+//               // moveNeedle(AngleToSlot(bearing));
     }
 
 /*
@@ -123,12 +132,16 @@ void main(void) {
     __delay_ms(1000);
     while (1)
     {
-        //printf("Yo");
-                //printf("HelloT \n");
-                __delay_ms(50);
-                ComputeAng();
-                UpdateDisplay();
-
+        moveNeedle_fw();
+        __delay_ms(50);
+        
+        for (int i=0; i<100; i++)
+        {
+             ComputeAng();
+              UpdateDisplay();
+        }
+    
+               
         }
         
         
