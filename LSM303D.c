@@ -164,8 +164,23 @@ void LSM303D_init(void)
 
 void LSM303D_Update_M_Data( void)
 {
+    double locX=0;
+    double locY=0;
+    
+    for(int i=0;i<50;i++)
+    {
     LSM303D_Write(ADDR_CTRL_REG7,REG7_ONE_SHOT_M);
     LSM303D_Read_M();
+    
+    locX=locX+ ((double) mX);
+    locY=locY+ ((double) mY );
+     __delay_ms(3);
+    
+    }
+    
+    mX=(int)(locX/50);
+    mY=(int)(locY/50);
+    
     
    // printf("SLOTXY=%d:%d:%d\n",CurrentSlot,mX,mY);
     

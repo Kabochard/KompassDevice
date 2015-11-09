@@ -1,13 +1,10 @@
 #include "needle.h"
 #include <xc.h>
+#include <stdlib.h>
+
+#define _XTAL_FREQ 16000000
 
 
-void initNeedle(void)
-{
-    CurrentSlot = 0;
-    moveNeedle(0);
-    
-}
 
 void swithcAllInductanceOff(void)
 {
@@ -70,6 +67,49 @@ void moveNeedle(int n)
     CurrentSlot = n;
 }
 
+void initNeedle(void)
+{
+    CurrentSlot = 0;
+    moveNeedle(0);
+    
+}
+
+void Needle_Move(int n)
+{
+    int target;
+    target = n % 32;
+    //int t1= (target + 16 ) % 32;
+    
+
+    while (CurrentSlot != target)
+    {
+        if (target <16) //target + 16 < 32 = 0 %32
+            if ((CurrentSlot > (target - 16) % 32) || (CurrentSlot < target))  
+            {
+                moveNeedle_fw();
+            }
+            else
+            {
+                moveNeedle_bk();
+            }
+        else 
+        {
+            if ((CurrentSlot > target - 16) && (CurrentSlot < target))
+            {
+                moveNeedle_fw();
+            }
+            else
+            {
+                moveNeedle_bk();
+            }
+        }
+        __delay_ms(10);
+    }
+
+    __delay_ms(2500);
+}
+
+
 char AngleToSlot(int Angle)
 {
     Angle = Angle%360;
@@ -91,6 +131,77 @@ char GetCurrentSlot(void)
 {
     return CurrentSlot;
 }
+
+void Needle_Cvg(int n)
+{
+    int target;
+    target = n % 32;
+    //int t1= (target + 16 ) % 32;
+    int dist =  abs(target - CurrentSlot);
+    int tmp = abs(target + 32 - CurrentSlot);
+    
+    if (tmp < dist)
+    {
+        dist = tmp;
+    }
+
+   
+        if (target <16) //target + 16 < 32 = 0 %32
+            if ((CurrentSlot > (target - 16) % 32) || (CurrentSlot < target))  
+            {
+                moveNeedle_fw();
+                if (dist > 3)
+                {
+                    moveNeedle_fw();
+                }
+                if (dist >6)
+                {
+                    moveNeedle_fw();
+                }
+            }
+            else
+            {
+                moveNeedle_bk();
+                if (dist > 3)
+                {
+                    moveNeedle_bk();
+                }
+                if (dist >6)
+                {
+                    moveNeedle_bk();
+                }
+            }
+        else 
+        {
+            if ((CurrentSlot > target - 16) && (CurrentSlot < target))
+            {
+               moveNeedle_fw();
+                if (dist > 3)
+                {
+                    moveNeedle_fw();
+                }
+                if (dist >6)
+                {
+                    //moveNeedle_fw();
+                }
+            }
+            else
+            {
+                moveNeedle_bk();
+                if (dist > 3)
+                {
+                    moveNeedle_bk();
+                }
+                if (dist > 6)
+                {
+                   // moveNeedle_bk();
+                }
+            }
+        }
+  
+    __delay_ms(200);
+}
+
 //void MoveOneStepToSlot(char target)
 //{
 //    //Test pour stabiliser l aiguille
