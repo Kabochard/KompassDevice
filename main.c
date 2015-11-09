@@ -103,7 +103,8 @@ void ComputeAng()
                 
 //    Commented for speeding up calib 
 //        //retrieve distance and bearing from uart (ios) 
-     
+
+//Uncomment For fun     
      int TargetSlot = AngleToSlot(TruAng);
      
            if (abs(TargetSlot - GetCurrentSlot())%32 > 0)
