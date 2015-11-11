@@ -103,11 +103,17 @@ void ComputeAng()
                 
 //    Commented for speeding up calib 
 //        //retrieve distance and bearing from uart (ios) 
-
-//Uncomment For fun     
-     int TargetSlot = AngleToSlot(TruAng);
      
-           if (abs(TargetSlot - GetCurrentSlot())%32 > 0)
+      char bear[4];
+       int cap;
+       cap = GET_CAP();
+        sprintf(bear, "%3d", TruAng);
+      
+
+//Move towards the target     
+     int TargetSlot = AngleToSlot(cap + TruAng);
+     
+     if (abs(TargetSlot - GetCurrentSlot())%32 > 0)
       {
           Needle_Cvg(TargetSlot);
       }
@@ -118,10 +124,6 @@ void ComputeAng()
        distance = GET_DIST();
        sprintf(dist, "%5d", distance);
        
-       char bear[4];
-       int cap;
-       cap = GET_CAP();
-        sprintf(bear, "%3d", TruAng);
       
         char slot[3];
         int slt;
@@ -148,17 +150,8 @@ void ComputeAng()
       OLEDText ( 0, 0, &txt, SIZE_ONE, WHITE );
       OLEDUpdateDisplay ( DDGRAM_CLEAR );
       
-      //moveNeedle_fw();
-      // __delay_ms(1000);
-//      
-
-                
-              
-               
-//                if (abs( AngleToSlot(-TruAng) - slt ) > 1)
-//                {
-//                Needle_Move(AngleToSlot(-TruAng));
-//                }
+     
+      
     }
 
 /*
@@ -181,47 +174,37 @@ void main(void) {
     Needle_Move(5);
     
     __delay_ms(1000);
+    
     while (1)
     {
-        //moveNeedle_fw();
-        //__delay_ms(50);
+        for (int j=0; j<50; j++)
+        {
+             ComputeAng();
+             UpdateDisplay();
+        }
         
-   
+        moveNeedle_fw();
+         __delay_ms(100);
+                
+    }
+    
+    while (1)
+    {
+       
+        
              ComputeAng();
             
 
-       // Needle_Move((GetCurrentSlot() + 10) % 32 );
-        // moveNeedle((GetCurrentSlot() + 3) % 32 );
-       //__delay_ms(1000);
-         
+      
+             
         UpdateDisplay();
-             // MoveOneStepToSlot( AngleToSlot(TruAng));
-             // moveNeedle(AngleToSlot(TruAng));
-           //  __delay_ms(100);
-
+     
+        
         }
         
         
-//    MagAng = Update_Magnetic_Angle();
-//  
-//    
-//    char disp[4];
-//    
-//    char str[10];
-//
-//    sprintf(disp, "%d", MagAng);
-//    OLEDText ( 0, 0, disp, SIZE_ONE, WHITE );
-//    OLEDUpdateDisplay ( DDGRAM_CLEAR );
-//    
-//    //MoveOneStepToSlot(AngleToSlot(MagAng)); 
-     //   moveNeedle(pos);
-     //   pos = (pos +1) % 32;
-//        ComputeAng();
-//        
-//        printf("XY:%d:%d",GetMx(),GetMy());
-//        UpdateDisplay();
-//        //printf("Hello");
-//      __delay_ms(100);
+
+    
    
         
    
